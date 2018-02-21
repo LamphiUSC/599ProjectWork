@@ -10,7 +10,7 @@ from collections import defaultdict
 from geopy.distance import vincenty
 import pickle
 
-with open('ufo_awesome.json',encoding="utf8") as json_data:
+with open('ufo_awesome.json') as json_data:
     ufo_data = json.load(json_data)
     print(len(ufo_data))
     print(ufo_data[0])
@@ -33,10 +33,10 @@ count = 0
 # From the country and state we got from the reverse query, we need to form the region ISO code.
 #Need to find a way to generate region ISO code from state and country. GeoName package can help. but need to search more on this.
 ufo_region_data=[]
-count=67
+count=64
 exception = False
 geocod_dict = {}
-for i,data in enumerate(ufo_data[18000:]):
+for i,data in enumerate(ufo_data[4158:]):
     exception = False
     if i%10 == 0:
         print(i)
