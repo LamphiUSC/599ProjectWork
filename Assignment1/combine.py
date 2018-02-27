@@ -1,7 +1,8 @@
 import pickle
 
+#used to combine all the pcike files into a single pickle file
 pdata_900_30k = []
-for i in range(0,20):
+for i in range(0,200):
     fname = "ufo_region_data"+str(i)+".pickle"
     with open(fname, 'rb') as f1:
         data = pickle.load(f1)

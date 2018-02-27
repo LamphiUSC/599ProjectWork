@@ -12,8 +12,6 @@ import pickle
 
 with open('ufo_awesome.json') as json_data:
     ufo_data = json.load(json_data)
-    print(len(ufo_data))
-    print(ufo_data[0])
 
 us_state_code = open('state_code.csv', "r")
 us_state = csv.reader(us_state_code)
