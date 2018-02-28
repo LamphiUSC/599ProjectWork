@@ -58,6 +58,23 @@ The file is a list of dictionaries. It can directly be connverted into json. as 
 
 Below are some properties of this file
 
-1) Total entries:- 61067 (Same as ufo_sightings json)
-2) Around 58k entries have their lat long value populated.
-3) Out of these entries, 5.8k has m_possibility value as True
+a) Total entries:- 61067 (Same as ufo_sightings json)
+b) Around 58k entries have their lat long value populated.
+c) Out of these entries, 5.8k has m_possibility value as True
+
+8)getYearWiseUFOCount.py
+-- Used to just understand the no.of UFO sightings recorded or sighted in each year. 
+-- This helped us to focus on the census data for the years where the highest sightings are reported (>400 ~ around 0.6 percentile of the total sightings) 
+
+Libraries required
+pip3 install json
+pip3 install csv
+
+9)UFO_Join_Census.py
+-- joins UFO data with Census data (of 2000,2010) which covers timeperiod from 1991 to 2010. 
+-- We group and count the UFO sightings by County and join this with the Census data
+-- Output no.of sightings in a state, county and the year with the respective population density and housing density.
+
+Libraries required
+pip3 install json
+pip3 install csv
