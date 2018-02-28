@@ -21,8 +21,9 @@ for r in ufo_data:
             print(r)
         yearDict[year]= 1
 
-abc = open("output1.csv",'w')
+abc = open("output_UFOCountByYear.tsv",'w')
+abc.write("Year Count\n")
 s = [(k, yearDict[k]) for k in sorted(yearDict, key=yearDict.get, reverse=True)]
 for k, v in s:
-    abc.write(str(k)+','+str(v)+'\n')
+    abc.write(str(k)+"  "+str(v)+"\n")
 
