@@ -18,7 +18,7 @@ ResultDict = defaultdict(list)
 # dictionary with tuple (state, county, year) as key ,value list of [UFOSightingCount, population density, housing density]
 
 #writing into the final merged output file
-tsvout=open('../ufo_airport_scifi_census_merged.tsv', 'w', encoding="utf8")
+tsvout=open('../ufo_airport_scifi_census_merged.tsv', 'w')
 
 
 with open('Input_2000Census.csv') as csvfile:
@@ -93,7 +93,7 @@ with open('Input_CountyCitiesList.csv') as csvfile:
             StateCountyCities[(temp[4].lower(), temp[1])] = temp[3].lower()
 
 count = 0
-with open('../ufo_output_final.tsv', encoding="utf8") as tsvin:
+with open('../ufo_airport_scifi_merged.tsv') as tsvin:
     tsvreader = csv.reader(tsvin, delimiter='\t')
     header =  next(tsvreader, None)
     for col in header:
@@ -109,7 +109,7 @@ with open('../ufo_output_final.tsv', encoding="utf8") as tsvin:
         location = row[2].split(",")
         stateInitial = location[1].strip()
         if(stateInitial not in stateAbbr.keys()): # this is to filter out invalid state e.g: location CANADA, BC (outside of U.S)
-            continue
+            tsvout.write('\n')
         else:
             state = stateAbbr[stateInitial]
             if 'County' in location[0]:
@@ -133,7 +133,8 @@ with open('../ufo_output_final.tsv', encoding="utf8") as tsvin:
                 tempval = CensusStateYear[t]
                 tsvout.write(county + '\t' + str(tempval[0]) + '\t' + str(tempval[1]) + '\t' + tempval[2] + '\n')
             else:
-                continue
+                tsvout.write('\n')
+                
 
 
 print("Incorrect sighting locations which we could not map to a county : "+ str(count))
