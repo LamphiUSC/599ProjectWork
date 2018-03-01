@@ -67,4 +67,8 @@ The important files present in the folders are :-
 
 
 11)lat_long_correction.py
--- This code is used to correct some of the lat_long errors occured during geocoding due to the wrong state being considered for some cities, where these city names are present in more than one state.
+-- This code is used to correct some of the lat_long errors occured during geocoding due to the wrong state being considered for some cities, where these city names are present in more than one state.	
+
+
+12) merging_scifi_ufo.py
+-- This code is used to merge and join the ufo sighting data with the sci-fi data created.
