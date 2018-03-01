@@ -1,7 +1,7 @@
 import csv
 
 #writing into the final merged output file
-tsvout=open('../ufo_output_final_merged.tsv', 'w')
+tsvout=open('../ufo_airport_scifi_merged.tsv', 'w')
 
 
 #reading data from the merged file of the meteor data and the sci_fi dataset created
@@ -26,10 +26,11 @@ with open('../ufo_output_final.tsv','rb') as tsvin,open('sci_fi_output.tsv','rb'
     		tsvout.write("Number of sci_fi movies released\tNumber of ufo sightings\tRatio of number of ufo sightings to number of movies released in that year \tPossibility of ufo_sighting being a dillusion after a sci-fi movie being released?\n")
     	else:
     		year = row[0][0:4]
-    		if year == str(0):
+    		if year not in sci_fi_dict:
 				year = row[1][0:4]
     		for col in row:
     			tsvout.write(col+'\t')
+
     		if year in sci_fi_dict:
     			tsvout.write(sci_fi_dict[year][0]+'\t'+sci_fi_dict[year][1]+'\t'+sci_fi_dict[year][2]+'\t'+sci_fi_dict[year][3]+'\n')
     		else:

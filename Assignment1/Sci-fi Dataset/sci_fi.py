@@ -36,10 +36,10 @@ sci_fi_output.write("Year\tNumber of sci_fi movies released\tNumber of ufo sight
 for year in sci_fi_dict:
 	if year in ufo_dict:
 		if(ufo_dict[year]/sci_fi_dict[year]<2): #checking if the ratio is less than 2 where it is considered to be a possibility
-			possible = "Yes"
+			possible = "True"
 			yes_counter = yes_counter+1
 		else:
-			possible = "No"
+			possible = "False"
 			no_counter = no_counter+1
 		ratio = float(ufo_dict[year])/float(sci_fi_dict[year])
 		sci_fi_output.write(str(year)+'\t'+str(sci_fi_dict[year])+'\t'+str(ufo_dict[year])+'\t'+str(ratio)+'\t'+possible+'\n')
