@@ -32,7 +32,7 @@ for row in ufo_data:
 		ufo_dict[year]= 1
 yes_counter=0
 no_counter=0
-sci_fi_output.write("year\tNumber of sci_fi movies released\tNumber of ufo sightings\tratio of number of movies released to number of sightings that took place in that year \tPossibility of ufo_sighting being a dillusion after a sci-fi movie being released?\n")
+sci_fi_output.write("Year\tNumber of sci_fi movies released\tNumber of ufo sightings\tRatio of number of ufo sightings to number of movies released in that year \tPossibility of ufo_sighting being a dillusion after a sci-fi movie being released?\n")
 for year in sci_fi_dict:
 	if year in ufo_dict:
 		if(ufo_dict[year]/sci_fi_dict[year]<2): #checking if the ratio is less than 2 where it is considered to be a possibility
@@ -44,12 +44,12 @@ for year in sci_fi_dict:
 		ratio = float(ufo_dict[year])/float(sci_fi_dict[year])
 		sci_fi_output.write(str(year)+'\t'+str(sci_fi_dict[year])+'\t'+str(ufo_dict[year])+'\t'+str(ratio)+'\t'+possible+'\n')
 
-print "Number of possible true dillusions "+str(yes_counter)
-print "Number of possible false dillusions "+str(no_counter)
+print "Number of possible true delusions "+str(yes_counter)
+print "Number of possible false delusions "+str(no_counter)
 total_counter = yes_counter+no_counter
 percent_of_yes = float(yes_counter)/total_counter*100
 percent_of_no = float(no_counter)/total_counter*100
-print "Percent of possible true dillusions "+str(percent_of_yes)
-print "Percent of possible false dillusions "+str(percent_of_no)
+print "Percent of possible true delusions "+str(percent_of_yes)
+print "Percent of possible false delusions "+str(percent_of_no)
 
 
