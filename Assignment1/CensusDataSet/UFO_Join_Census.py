@@ -98,9 +98,10 @@ with open('../ufo_airport_scifi_merged.tsv') as tsvin:
     header =  next(tsvreader, None)
     for col in header:
         tsvout.write(col + '\t')
-    tsvout.write("County\tPopulation Density\tHousing Denisty\tRural?\n")
+    tsvout.write("County\tPopulation Density\tHousing Denisty\tRural?")
     #row[0]-- sighted at [1] reported at [2] location
     for row in tsvreader:
+        tsvout.write('\n')
         for col in row:
             tsvout.write(col + '\t')
         year = int(row[0][0:4])
