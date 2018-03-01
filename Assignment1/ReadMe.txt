@@ -21,6 +21,9 @@ pip3 install pymongo
 Also make sure mongo is running on the terminal
 
 4) NearDist.py
+-- Used to find the nearest airport to a geocoded location. We are storing all the unique locations in the Mongo DB
+-- For US locations, we find nearest airport by assuming that it would be in either same state or in theneighbouring state. For US neighbouring state we are using the pickle file neighbour_dict.pickle
+-- For non-US locations, we assume that the nearest airport will be in the same country.
 
 5) wiki_scifi.py
 -- Used to scrape the Wikipedia page containing all the sci-fi movie lists released till date and stores it in a file named sci-fi_database.csv
@@ -33,34 +36,11 @@ pip install urlib2
 -- Used to combine the sci-fi_database.csv and the ufo_awesome sightings to produce the resultant sci_fi_output.tsv file with its 3 features.
 
 
+7) meteor.py
+-- Use Meteorite_Landings.csv as the dataset. Index it based upon the year of the meteor landing.
+-- Merge the unique locations stored in mongoDB to the UFO sighting Dataset.
+-- Find the nearest meteor landings based on geocoded locations and the year.
 
-
-
-7) compiled_list_1.pickle
-This file contains following fields. ALl the names are pretty self evident.
-m_possibility field is based on if the meteor distance is less than 100.
-The file is a list of dictionaries. It can directly be connverted into json. as the field names with original file are consistent
-
-
-{'sighted_at': '19950101',
-'reported_at': '19950103', 
-'location': ' Shelton, WA', 
-'shape': '', 
-'duration': '', 
-'description': 'Telephoned Report:CA woman visiting daughter witness discs and triangular ships over Squaxin Island in Puget Sound. Dramatic.  Written report, with illustrations, submitted to NUFORC.', 
-'latitude': 47.2150945, 
-'longitude': -123.1007066, 
-'Nearest Airport': 'Mason General Hospital Heliport', 
-'Distance': 0.8555842771525585, 
-'meteor_name': 'Hot Springs', 
-'meteor_distance': 560.8548905304182, 
-'m_possibility': 'False'}
-
-Below are some properties of this file
-
-a) Total entries:- 61067 (Same as ufo_sightings json)
-b) Around 58k entries have their lat long value populated.
-c) Out of these entries, 5.8k has m_possibility value as True
 
 8)getYearWiseUFOCount.py
 -- Used to just understand the no.of UFO sightings recorded or sighted in each year. 
