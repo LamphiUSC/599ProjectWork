@@ -27,7 +27,12 @@ with open('Input_2000Census.csv') as csvfile:
             continue
         state = stateCounty[1].strip()
         tempcounty = stateCounty[2].strip()
-        val = (float(row['HC08'].strip()), float(row['HC09'].strip()))
+        popDensity = float(row['HC08'].strip())
+        houseDensity = float(row['HC09'].strip())
+        if(popDensity > 1000 and houseDensity > 500):
+            val = (popDensity,houseDensity, 'Urban' )
+        else:
+            val = (popDensity,houseDensity, 'Rural' )
         if 'County' in tempcounty:
             county = tempcounty.replace('County','').strip().lower()
         elif 'Municipio' in tempcounty:
@@ -36,6 +41,8 @@ with open('Input_2000Census.csv') as csvfile:
             county = tempcounty.replace('Census Area','').strip().lower()
         elif 'Borough' in tempcounty:
             county = tempcounty.replace('Borough','').strip().lower()
+        elif 'City' in tempcounty:  # some cities are independent so County and City would be same E.g: Carson City, Nevada
+            county = tempcounty.replace('City','').strip().lower()
         for y in range(1991, 2001):  # years from 1991 to 2000
             CensusStateYear[(state, county, y)] = val
 
@@ -49,7 +56,12 @@ with open('Input_2010Census.csv') as csvfile:
             continue
         state = stateCounty[1].strip()
         tempcounty = stateCounty[2].strip()
-        val = (float(row['SUBHD0401'].strip()), float(row['SUBHD0402'].strip()))
+        popDensity = float(row['SUBHD0401'].strip())
+        houseDensity = float(row['SUBHD0402'].strip())
+        if (popDensity > 1000 and houseDensity > 500):
+            val = (popDensity, houseDensity, 'Urban')
+        else:
+            val = (popDensity, houseDensity, 'Rural')
         if 'County' in tempcounty:
             county = tempcounty.replace('County','').strip().lower()
         elif 'Municipio' in tempcounty:
@@ -58,6 +70,8 @@ with open('Input_2010Census.csv') as csvfile:
             county = tempcounty.replace('Census Area','').strip().lower()
         elif 'Borough' in tempcounty:
             county = tempcounty.replace('Borough','').strip().lower()
+        elif 'City' in tempcounty:  # some cities are independent so County and City would be same E.g: Carson City, Nevada
+            county = tempcounty.replace('City','').strip().lower()
         for y in range(2001, 2011):  # years from 2001 to 2010
             CensusStateYear[(state, county, y)] = val
 #print(len(CensusStateYear.keys()))
@@ -121,16 +135,17 @@ UFOStateSet = set(UFOStateYear)
 #joining two dictionaries on common key:
 for key in censusSet.intersection(UFOStateSet):
     ResultDict[key].append(UFOStateYear[key])
-    temp = CensusStateYear[key] # () tuple population density, housing density
+    temp = CensusStateYear[key] # () tuple population density, housing density, urban-rural classification
     ResultDict[key].append(temp[0])
     ResultDict[key].append(temp[1])
+    ResultDict[key].append(temp[2])
 
 #creating output tsv file and writing results into it
 resultOutputFile = open("Output_CensusJoinUFOByCounty.tsv",'w')
-resultOutputFile.write("State   County  Year    UFOSightingCount   Population_Density   Housing_Density\n")
+resultOutputFile.write("State   County  Year    UFOSightingCount   Population_Density   Housing_Density Urban_Rural\n")
 for k, v in ResultDict.items():
     try:
-        resultOutputFile.write(str(k[0])+"  "+str(k[1])+"  "+str(k[2])+"  "+str(v[0])+"  "+str(v[1])+"  "+str(v[2])+"\n")
+        resultOutputFile.write(str(k[0])+"  "+str(k[1])+"  "+str(k[2])+"  "+str(v[0])+"  "+str(v[1])+"  "+str(v[2])+"   "+str(v[3])+"\n")
     except:
         print(k,ResultDict[k])
 
