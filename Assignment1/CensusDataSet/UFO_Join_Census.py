@@ -1,4 +1,3 @@
-import json
 import csv
 from collections import defaultdict
 
@@ -17,6 +16,11 @@ UFOStateYear ={} # dictionary with tuple (state, county , year) as key and value
 CensusStateYear = {} # dictionary with tuple (state, county, year) as key and value is tuple of (population density, housing density)
 ResultDict = defaultdict(list)
 # dictionary with tuple (state, county, year) as key ,value list of [UFOSightingCount, population density, housing density]
+
+#writing into the final merged output file
+tsvout=open('../ufo_airport_scifi_census_merged.tsv', 'w', encoding="utf8")
+
+
 with open('Input_2000Census.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     next(reader, None)
@@ -30,9 +34,9 @@ with open('Input_2000Census.csv') as csvfile:
         popDensity = float(row['HC08'].strip())
         houseDensity = float(row['HC09'].strip())
         if(popDensity > 1000 and houseDensity > 500):
-            val = (popDensity,houseDensity, 'Urban' )
+            val = (popDensity,houseDensity, 'False' )  # Column false for urban area
         else:
-            val = (popDensity,houseDensity, 'Rural' )
+            val = (popDensity,houseDensity, 'True' )   # Column True for rural area
         if 'County' in tempcounty:
             county = tempcounty.replace('County','').strip().lower()
         elif 'Municipio' in tempcounty:
@@ -59,9 +63,9 @@ with open('Input_2010Census.csv') as csvfile:
         popDensity = float(row['SUBHD0401'].strip())
         houseDensity = float(row['SUBHD0402'].strip())
         if (popDensity > 1000 and houseDensity > 500):
-            val = (popDensity, houseDensity, 'Urban')
+            val = (popDensity, houseDensity, 'False')
         else:
-            val = (popDensity, houseDensity, 'Rural')
+            val = (popDensity, houseDensity, 'True')
         if 'County' in tempcounty:
             county = tempcounty.replace('County','').strip().lower()
         elif 'Municipio' in tempcounty:
@@ -88,64 +92,53 @@ with open('Input_CountyCitiesList.csv') as csvfile:
         else:
             StateCountyCities[(temp[4].lower(), temp[1])] = temp[3].lower()
 
-
-# Group and count the UFO sightings by county in each state
-with open('ufo_awesome.json',encoding = "utf-8") as json_data:
-    ufo_data = json.load(json_data)
 count = 0
-for r in ufo_data:
-    year = int(r['sighted_at'][0:4])
-    if year ==0:
-        year = int(r['reported_at'][0:4])
-    location = r['location'].split(",")
-    stateInitial =location[1].strip()
-    if(stateInitial not in stateAbbr.keys()): # this is to filter out invalid state e.g: location CANADA, BC (outside of U.S)
-        continue
-    else:
-        state = stateAbbr[stateInitial]
-        if 'County' in location[0]:
-            county = location[0].replace('County','').strip()
+with open('../ufo_output_final.tsv', encoding="utf8") as tsvin:
+    tsvreader = csv.reader(tsvin, delimiter='\t')
+    header =  next(tsvreader, None)
+    for col in header:
+        tsvout.write(col + '\t')
+    tsvout.write("County\tPopulation Density\tHousing Denisty\tRural?\n")
+    #row[0]-- sighted at [1] reported at [2] location
+    for row in tsvreader:
+        for col in row:
+            tsvout.write(col + '\t')
+        year = int(row[0][0:4])
+        if year == 0:
+            year = int(row[1][0:4])
+        location = row[2].split(",")
+        stateInitial = location[1].strip()
+        if(stateInitial not in stateAbbr.keys()): # this is to filter out invalid state e.g: location CANADA, BC (outside of U.S)
+            continue
         else:
-            if '(' in location[0]:
-                tempStr  = location[0].split('(')[0].strip()
+            state = stateAbbr[stateInitial]
+            if 'County' in location[0]:
+                county = location[0].replace('County', '').strip()
             else:
-                tempStr = location[0].strip()
-            if 'City' in tempStr:
-                city = tempStr.replace('City','').strip()
+                if '(' in location[0]:
+                    tempStr = location[0].split('(')[0].strip()
+                else:
+                    tempStr = location[0].strip()
+                if 'City' in tempStr:
+                    city = tempStr.replace('City', '').strip()
+                else:
+                    city = tempStr
+                try:
+                    county = StateCountyCities[(city.lower(), stateInitial)] # valid can be joined
+                except:
+                    count = count + 1  #to count invalid sighting locations which we could not map to a county
+                    continue
+            t = (state, county, year)
+            if t in CensusStateYear.keys():
+                tempval = CensusStateYear[t]
+                tsvout.write(county + '\t' + str(tempval[0]) + '\t' + str(tempval[1]) + '\t' + tempval[2] + '\n')
             else:
-                city = tempStr
-            try:
-                county = StateCountyCities[(city.lower(), stateInitial)]
-            except:
-                count = count+1
-                #print(location)
                 continue
-        t = (state, county, year)
-        if t in UFOStateYear:
-            UFOStateYear[t] = UFOStateYear[t]+1
-        else:
-            UFOStateYear[t] = 1
+
 
 print("Incorrect sighting locations which we could not map to a county : "+ str(count))
 
 
 
-censusSet = set(CensusStateYear)
-UFOStateSet = set(UFOStateYear)
-#joining two dictionaries on common key:
-for key in censusSet.intersection(UFOStateSet):
-    ResultDict[key].append(UFOStateYear[key])
-    temp = CensusStateYear[key] # () tuple population density, housing density, urban-rural classification
-    ResultDict[key].append(temp[0])
-    ResultDict[key].append(temp[1])
-    ResultDict[key].append(temp[2])
 
-#creating output tsv file and writing results into it
-resultOutputFile = open("Output_CensusJoinUFOByCounty.tsv",'w')
-resultOutputFile.write("State   County  Year    UFOSightingCount   Population_Density   Housing_Density Urban_Rural\n")
-for k, v in ResultDict.items():
-    try:
-        resultOutputFile.write(str(k[0])+"  "+str(k[1])+"  "+str(k[2])+"  "+str(v[0])+"  "+str(v[1])+"  "+str(v[2])+"   "+str(v[3])+"\n")
-    except:
-        print(k,ResultDict[k])
 
