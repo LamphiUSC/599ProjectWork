@@ -4,38 +4,31 @@ import json
 import  pickle
 from pymongo import MongoClient
 
-meteorite_fname = "Meteorite_Landings.csv"
+fname = "meteorites.json"
 
-metorites_db = open(meteorite_fname, "r",encoding="UTF-8")
-meteorites = csv.reader(metorites_db)
+data = json.load(open(fname,encoding="UTF-8"))
 
 meteor_dict = {}
 
-count=0
-for row in meteorites:
-    #print(row)
-    if count == 0:
-        count+=1
-        #Ignore the first row as itcontains field names
-        continue
-    else:
-        if row[6] !="" and row[7]!="" and row[8]!="":
-            #Get the yearof meteor landing
-            name = row[0]
-            year_list = row[6].split("/")
-            year = int(year_list[2][:4])
-            try:
-                lat = float(row[7])
-                long = float(row[8])
-            except ValueError as e:
-                print(row[7],row[8])
-            if lat!=0 and long != 0:
-                record = [name,lat,long]
-                if year in meteor_dict:
-                    meteor_dict[year].append(record)
-                else:
-                    meteor_dict[year] = [record]
-    count+=1
+for row in data:
+    if 'year' in row and 'reclat' in row and 'reclong' in row:
+        if 'name' in row:
+            name = row['name']
+        else:
+            name = ""
+        year_list = row['year'].split("-")
+        year = int(year_list[0])
+        try:
+            lat = float(row['reclat'])
+            long = float(row['reclong'])
+        except ValueError as e:
+            print(row['reclat'],row['reclong'])
+        if lat!=0 and long != 0:
+            record = [name,lat,long]
+            if year in meteor_dict:
+                meteor_dict[year].append(record)
+            else:
+                meteor_dict[year] = [record]
 
 with open("meteorite_data.pickle",'wb') as f:
     pickle.dump(meteor_dict,f)
