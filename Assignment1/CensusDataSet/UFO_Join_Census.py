@@ -18,7 +18,7 @@ ResultDict = defaultdict(list)
 # dictionary with tuple (state, county, year) as key ,value list of [UFOSightingCount, population density, housing density]
 
 #writing into the final merged output file
-tsvout=open('../ufo_airport_scifi_census_merged.tsv', 'w')
+tsvout=open('../ufo_awesome_FINAL_OUTPUT.tsv', 'w')
 
 
 with open('Input_2000Census.csv') as csvfile:
@@ -93,7 +93,7 @@ with open('Input_CountyCitiesList.csv') as csvfile:
             StateCountyCities[(temp[4].lower(), temp[1])] = temp[3].lower()
 
 count = 0
-with open('../ufo_airport_scifi_merged.tsv') as tsvin:
+with open('../ufo_airport_meteorite_scifi_merged.tsv') as tsvin:
     tsvreader = csv.reader(tsvin, delimiter='\t')
     header =  next(tsvreader, None)
     for col in header:

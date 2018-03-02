@@ -1,11 +1,11 @@
 import csv
 
 #writing into the final merged output file
-tsvout=open('../ufo_airport_scifi_merged.tsv', 'w')
+tsvout=open('../ufo_airport_meteorite_scifi_merged.tsv', 'w')
 
 
 #reading data from the merged file of the meteor data and the sci_fi dataset created
-with open('../ufo_output_final.tsv','rb') as tsvin,open('sci_fi_output.tsv','rb') as sci_fi_input:
+with open('../ufo_airport_meteorite.tsv','rb') as tsvin,open('sci_fi_output.tsv','rb') as sci_fi_input:
     sci_fi_input = csv.reader(sci_fi_input, delimiter='\t')
     tsvin = csv.reader(tsvin, delimiter='\t')
 
