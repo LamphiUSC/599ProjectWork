@@ -5,7 +5,7 @@ import  pickle
 with open("compiled_list_1.pickle",'rb') as f:
     c_list = pickle.load(f)
 
-f = open("final.tsv","w",encoding="UTF-8")
+f = open("../ufo_airport_meteorite.tsv","w",encoding="UTF-8")
 
 count = 0
 for item in c_list:
