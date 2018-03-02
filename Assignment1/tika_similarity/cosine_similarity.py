@@ -31,12 +31,12 @@ with open("cosine_similarity.csv", "w") as outF:
 
 
             row1 = "Meteorite"+str(listOfDict[key1]["Meteor possibility"])
-            row1 = row1 + "Sci-fi"+str(listOfDict[key1]["Possibility of ufo_sighting being a dillusion after a sci-fi movie being released?"])
+            row1 = row1 + "Sci-fi"+str(listOfDict[key1]["Possibility of ufo_sighting being a delusion after a sci-fi movie being released?"])
             row1 = row1 + "isRural" + str(listOfDict[key1]["Rural?"])
 
             row2 = "Meteorite" + str(listOfDict[key2]["Meteor possibility"])
             row2 = row2 + "Sci-fi" + str(
-                listOfDict[key2]["Possibility of ufo_sighting being a dillusion after a sci-fi movie being released?"])
+                listOfDict[key2]["Possibility of ufo_sighting being a delusion after a sci-fi movie being released?"])
             row2 = row2 + "isRural" + str(listOfDict[key2]["Rural?"])
 
 
