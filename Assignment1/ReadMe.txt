@@ -2,7 +2,7 @@ There are 5 major sub-folders in the Assignment. One for each of the 3 datasets,
 Each folder for dataset contains the python scripts to extract the features, the input data required to process the data and its resulting output. The tika_similarity folder contains python scripts for computing EditDistance similarity, cosine similarity and jaccard similarity for the features present in joined dataset.
 
 The main input file containing the ufo data is :- ufo_awesome.json
-The main modified output file containing the ufo data is :- ufo_output_final.tsv
+The main modified output file containing the ufo data is :- ufo_airport_scifi_census_merged.tsv
 
 The libraries used/need to be installed are:-
 pip3 install json
