@@ -1,6 +1,6 @@
 import pickle
 
-with open('../ufo_airport_scifi_census_merged.tsv', 'r') as tsvFile:
+with open('../ufo_awesome_FINAL_OUTPUT.tsv', 'r') as tsvFile:
     lines = tsvFile.readlines()
 
 count = 0
