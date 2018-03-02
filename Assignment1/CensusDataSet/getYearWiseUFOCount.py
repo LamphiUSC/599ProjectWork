@@ -1,6 +1,6 @@
 import json
 import csv
-with open('ufo_awesome.json',encoding = "utf-8") as json_data:
+with open('../ufo_awesome.json',encoding = "utf-8") as json_data:
     ufo_data = json.load(json_data)
     print(len(ufo_data))
 

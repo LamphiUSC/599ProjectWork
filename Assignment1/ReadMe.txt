@@ -10,6 +10,7 @@ pip3 install geopy
 pip3 install csv
 pip3 install pickle
 pip3 install pymongo
+pip3 install pandas
 pip install BeautifulSoup
 pip install bs4
 pip install urlib2
@@ -98,3 +99,6 @@ The important files present in the folders are :-
 
 18) cluster-d3.html
 -- Reads in cluster.json and renders the clusters in the html format.
+
+19)AggregateRuralData.py
+-- Sums up all UFO sightings in rural areas per year. Using this output we calculate percentage of UFO sightings in rural areas.
