@@ -82,7 +82,7 @@ The important files present in the folders are :-
 
 
 13) pickleDumpDict.py
--- This code is used to extract data from the joined data from all the datasets in ufo_airport_scifi_census_merged.tsv, create the dictionary of the features and a list of their corresponding values.
+-- This code is used to extract data from the joined data from all the datasets in ufo_awesome_FINAL_OUTPUT.tsv, create the dictionary of the features and a list of their corresponding values.
 
 
 14) editDist.py
@@ -104,11 +104,46 @@ The important files present in the folders are :-
 18) cluster-d3.html
 -- Reads in cluster.json and renders the clusters in the html format.
 
+
 19)AggregateRuralData.py
 -- Sums up all UFO sightings in rural areas per year. Using this output we calculate percentage of UFO sightings in rural areas.
+
 
 20)mergeAirportData.py
 -- This script merges the UFO sighting data with the Airport data.
 
+
 21)ConvertPickleToTSV.py
 -- This script converts pickle file,json to TSV file.
+
+
+22)airports.py
+-- This script will read the airports.csv dataset and will create a pickle file for the same.
+
+
+
+
+The order in which the programs need to be executed:
+1. geo.py
+2. combine_pickle_files.py
+3. merge_and_cache.py
+4. USNeighbours.py
+5. airports.py
+6. NearDist.py
+7. lat_long_correction.py
+8. mergeAirportData.py
+9. meteor.py
+10. ConvertPickleToTSV.py
+11. wiki_scifi.py
+12. sci_fi.py
+13. merging_scifi_ufo.py
+14. getYearWiseUFOCount.py
+15. UFO_Join_Census.py
+16. AggregateRuralData.py
+17. pickleDumpDict.py
+18. editDist.py
+19. cosine_similarity.py
+20. jaccard_similarity.py
+21. create-cluster.py
+22. cluster-d3.py
+
