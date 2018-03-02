@@ -102,3 +102,9 @@ The important files present in the folders are :-
 
 19)AggregateRuralData.py
 -- Sums up all UFO sightings in rural areas per year. Using this output we calculate percentage of UFO sightings in rural areas.
+
+20)mergeAirportData.py
+-- This script merges the UFO sighting data with the Airport data.
+
+21)ConvertPickleToTSV.py
+-- This script converts pickle file,json to TSV file.
