@@ -1,5 +1,5 @@
-There are 4 major sub-folders in the Assignment. One for each of the 3 datasets and one for the airport.
-Each folder contains the python scripts to extract the features, the input data required to process the data and its resulting output.
+There are 5 major sub-folders in the Assignment. One for each of the 3 datasets, one for the airport and one for tika-similarity computation for all the joined features of 4 datasets.
+Each folder for dataset contains the python scripts to extract the features, the input data required to process the data and its resulting output. The tika_similarity folder contains python scripts for computing EditDistance similarity, cosine similarity and jaccard similarity for the features present in joined dataset.
 
 The main input file containing the ufo data is :- ufo_awesome.json
 The main modified output file containing the ufo data is :- ufo_output_final.tsv
@@ -13,6 +13,8 @@ pip3 install pymongo
 pip install BeautifulSoup
 pip install bs4
 pip install urlib2
+pip install tika
+pip install editdistance
 Also make sure mongo is running on the terminal
 
 The important files present in the folders are :-
@@ -72,3 +74,27 @@ The important files present in the folders are :-
 
 12) merging_scifi_ufo.py
 -- This code is used to merge and join the ufo sighting data with the sci-fi data created.
+
+
+13) pickleDumpDict.py
+-- This code is used to extract data from the joined data from all the datasets in ufo_airport_scifi_census_merged.tsv, create the dictionary of the features and a list of their corresponding values.
+
+
+14) editDist.py
+-- Used to compute edit distance similarity metric for the features in the joined dataset. 
+
+
+15) cosine_similarity.py
+-- Used to compute cosine similarity metric for the features in the joined dataset. 
+
+
+16) jaccard_similarity.py
+-- Used to compute jaccard similarity metric for the features in the joined dataset. 
+
+
+17) create-cluster.py
+-- Reads in the the similarity.csv files and create clusters in clusters.json based on x-coordinate.
+
+
+18) cluster-d3.html
+-- Reads in cluster.json and renders the clusters in the html format.
