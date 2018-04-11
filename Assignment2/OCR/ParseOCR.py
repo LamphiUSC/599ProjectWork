@@ -2,101 +2,93 @@ import csv
 import re
 from collections import defaultdict
 import os
-data = {}
-dictkeys = ['Date of Sighting', 'Date of Report', 'Location', 'Shape', 'Duration', 'Description']
+Outputdata = {}
+dictkeys = ['Date of Sighting', 'Location', 'Shape', 'Duration', 'Description']
+# we will have 'Date of Report' = Date of Sighting as we are unable to extract any field like date of reports
+for k in dictkeys:
+	Outputdata[k] = []
 
 
 rootdir = 'OCR_Output'
-regularExpressions = {}
-regularExpressions['Date of Sighting_Duration'] = re.compile('Sighting = (.*)\n')
-regularExpressions['DESCRIPTION'] = re.compile('DESCRIPTION = (.*)\n')
-regularExpressions['Pos_OBSERVER_Loc'] = re.compile('OBSERVER = (.*)\n')
-regularExpressions['HOW_Observed_Desc'] = re.compile('OBSERVED = (.*)\n')
-regularExpressions['Direction_Desc'] = re.compile('OBSERVED = (.*)\n')
-regularExpressions['AngleOfSight_Desc'] = re.compile('OBSERVED = (.*)\n')
-regularExpressions['DISTANCE'] =  re.compile('OBSERVED = (.*)\n')
-regularExpressions['MOVEMENTS'] =  re.compile('OBSERVED = (.*)\n')
-regularExpressions['MET_Observed_Desc'] = re.compile('OBSERVED = (.*)\n')
+regExpPatterns = {}
+regExpPatterns['duration'] = re.compile('\d+\s*mins|\d+\s*secs|\d+\s*minutes|\d+\s*seconds')
+regExpPatterns['date'] = re.compile(r'\d+\s*\b(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june|july|aug(?:ust)?|sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s*\d+')
+regExpPatterns['year'] = re.compile('\d+$') # to extract year datetime string
+# regExpPatterns['Pos_OBSERVER_Loc'] = re.compile('OBSERVER = (.*)\n')
+# regExpPatterns['HOW_Observed_Desc'] = re.compile('OBSERVED = (.*)\n')
+# regExpPatterns['Direction_Desc'] = re.compile('OBSERVED = (.*)\n')
+# regularExpressions['AngleOfSight_Desc'] = re.compile('OBSERVED = (.*)\n')
+# regularExpressions['DISTANCE'] =  re.compile('OBSERVED = (.*)\n')
+# regularExpressions['MOVEMENTS'] =  re.compile('OBSERVED = (.*)\n')
+# regularExpressions['MET_Observed_Desc'] = re.compile('OBSERVED = (.*)\n')
 
-keywords = ['sighting','description','pos_observer_loc','how_observed_Desc','direction_desc','angleofsight_desc','distance','movements','met_observed_desc']
-
-
-
-#def matchLinewithRegex(line):
-
-	# for k,v in regularExpressions.items():
-	# 	output = v.match(line)
-	# 	if output is  not None:
-	# 		break
-	# return output
+keywords = ['sighting','description','location']
+#'how_observed_Desc','direction_desc','angleofsight_desc','distance','movements','met_observed_desc'
 
 
+def convert(dateString):
+	# input like '26 jan 85' convert to 19850126
+	months= {'jan':'01','feb':'02','mar':'03','apr':'04','may':'05','june':'06','july':'07','aug':'08','sep':'09','oct':'10','nov':'11','dec':'12'}
+	for k in months.keys():
+		if k in dateString:
+			month = months[k]
+			break
 
-
+	year  =re.compile('\d+$').search(dateString).group()
+	if len(year) ==2:
+		year = '19'+ year
+	res = year+month+dateString[:2]
+	return res
 
 
 def parse(filepath):
 	with open(filepath, encoding='utf8') as file:
-		content = file.read()
-		if 'flying' in content.lower():
+		content = file.read().lower()
+		if 'flying' in content:
 			lines = content.split('\n\n')
 			#lines = filter(None, lines)
-			lines = [line for line in lines if line != ' ']
-			matchedKeyword = ''
-			for line in lines:
+			lines = [line for line in lines if len(line) >=3]
+
+			linesItr = 0
+			ctrCheck = len(lines)-1
+			tempCtr = 0
+			while linesItr <= ctrCheck:
+				#print('in loop' + lines[linesItr])
+				matchedKeyword = ''
 				for keyword in keywords:
-					if keyword in line:
+					if keyword in lines[linesItr]:
 						matchedKeyword =keyword
 						break
-				print(matchedKeyword)
-				# if matched == True:
-				# 	data = lines.next()
-				# 	print(data)
+				#print(matchedKeyword)
+				if len(matchedKeyword) > 1:
+					linesItr +=1 # to skip this data on the next line
+					linedata = lines[linesItr]
+					if matchedKeyword == 'sighting': # we extract date of sight and duration and date of report
+						tempCtr+=1
+						Outputdata['Duration'].append(regExpPatterns['duration'].search(linedata).group())
+						Outputdata['Date of Sighting'].append(convert(regExpPatterns['date'].search(linedata).group()))
+					elif matchedKeyword =='description':
+						tempCtr+=1
+						Outputdata['Description'] = linedata
+					elif matchedKeyword == 'location':
+						tempCtr+=1
+						if '\n' in linedata:
+							linedata =linedata.replace('\n', ' ')
+						Outputdata['Location'].append(linedata)
+				if tempCtr == len(keywords):
+					break
+				linesItr +=1
 
 
 
-				# if any (keyword in line for keyword in keywords):
-				# 	keyword
-				# 	matched = True
-				# 	print(keyword)
-				# if matched == True:
-				# 	data = lines.next()
-				# 	print(data)
-				# 	continue
-
-
-
-
-
-# for subdir, dirs, files in os.walk(rootdir):
-# 	for file in files:
-# 		print(file)
-# 		break
-
-ctr = 0
 for subdir in os.listdir(rootdir):
 	print('inside subdir')
 	for files in os.walk(str(subdir)+'/outtxt/'):
 		fileCountItr = len(files[2])+1
-		for i in range(4,5):  #change back to 1 , fileCountItr
+		for i in range(1,fileCountItr):  #change back to 1 , fileCountItr
+			#print(str(subdir)+'/outtxt/'+ str(i)+'.txt')
 			parse(str(subdir)+'/outtxt/'+ str(i)+'.txt')
 			i = i+1
-			#ctr = ctr+1
 
-print(ctr)
-
-# class _RegExLib:
-#     """Set up regular expressions"""
-#     # use https://regexper.com to visualise these if required
-#     _reg_school = re.compile('School = (.*)\n')
-#     _reg_grade = re.compile('Grade = (.*)\n')
-#     _reg_name_score = re.compile('(Name|Score)')
-#
-#     def __init__(self, line):
-#         # check whether line has a positive match with all of the regular expressions
-#         self.school = self._reg_school.match(line)
-#         self.grade = self._reg_grade.match(line)
-#         self.name_score = self._reg_name_score.search(line)
-
-
+print(Outputdata)
 
