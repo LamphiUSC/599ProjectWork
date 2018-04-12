@@ -1,4 +1,4 @@
- 
+﻿ 
 
  
 
@@ -49,7 +49,8 @@ H. NAME AND ADDRESS OF HFOBMANT ' Section 40
 
 TEEBED
 0. OTHER WITNESSES Not Known. ' ‘
-i 'P.'. DATE AND TIRE 0F RECEIPT .AE Ops 2715152 Feb 82 '
+DATE AND TIME 0F RECEIPT .AF Ops 2715152 Feb 82 '
+
 " q. m UNUSUAL I'IETEOROIDGICAL "no
 
 CUNDTTIONS
@@ -59,8 +60,8 @@ Elm Object appeared t6 be attracted
 by a particularly large TV
 aerial on one of the houses._
 Section 40
-Date 27 Feb 82 - ' ' 739:1 Mr .1300 AF Ops
 
+  
  
 
  

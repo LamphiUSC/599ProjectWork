@@ -1,4 +1,4 @@
-LI} 4‘.
+﻿LI} 4‘.
 
 U
 
@@ -40,11 +40,8 @@ OTHER WITNESSES
 
  
 
-' DATE AND mm; 0F RECEIPT
-
- 
-
-120900Z DEC
+DATE AND TIME 0F RECEIPT
+15 DEC 81
 
  
 
