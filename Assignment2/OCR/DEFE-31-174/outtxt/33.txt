@@ -20,7 +20,7 @@ Duration of Sighting
  
 
 B. Description of Object
-(No 0? DbJECtS: size.
+(No of objects: size.
 shape. colour, brightness)
 
 1 obJect.
@@ -29,16 +29,16 @@ light.
 
  
 
-C. Exact Pusitiun 0F Observer
+C. Exact Position 0F Observer
 Location. indoorfautdcor:
 stationarg/moving
 
-Outdoors in stationaru
+Outdoors in stationary
 vehicle.
 
  
 
-D. How Observed (naked age.
+D. How Observed (naked eye.
 binoculars. other optical
 device. still or movie
 

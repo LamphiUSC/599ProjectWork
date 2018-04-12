@@ -38,7 +38,8 @@ M. Name & Address of Informant
 IN. Background of Informant that Housewife
 may be volunteered
 0. Other Witnesses Husband and neighbours
-P. Date, Time of Receipt 2418502 Oct 85
+P. Date, Time of Receipt 
+2418502 Oct 85
 0. Any Unusual Meteorological N'l
 Conditions 1
 O R k I

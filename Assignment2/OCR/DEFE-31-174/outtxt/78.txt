@@ -44,23 +44,36 @@ floodlights or night lighting)
 
  
 
-A. Date, Time & 250500A MAY 86
-Duration of Sighting 5 MINS
+A. Date, Time & 
+Duration of Sighting 
+250500A MAY 86
+5 MINS
 B. Description of Object
-(No of objects, size, ONE BIG RED BALL
+(No of objects, size, 
 shape, colour, brightness)
+ONE BIG RED BALL
+
 C. Exact Position of Observer
-Location, indoor/outdoor, INDOORS IN THE KITCHEN
+Location, indoor/outdoor, 
 stationary/moving
+INDOORS IN THE KITCHEN
+
 D. How Observed (naked eye,
-binoculars, other optical NAKED EIE
+binoculars, other optical 
 device, still or movie)
+NAKED EIE
+
 E. Direction in which object
-first seen (A landmark may NORTH FROM KITCEEN
-be more useful than a badly WINDOW “ ‘” ' "
+first seen (A landmark may 
+be more useful than a badly 
 estimated bearing)
-F. Angle of Sight (Estimated 45°
+NORTH FROM KITCEEN
+WINDOW “ ‘” ' "
+
+F. Angle of Sight (Estimated 
 heights are unreliable)
+45°
+
 G. Distance (By reference to a .
 known landmark) 6 FT FROM WINDOW
 H. Movements (Changes in E, F & C

@@ -22,7 +22,7 @@ Sighting.
 
 B.
 
-IEBCRIPTION OF OBJECT
+DESCRIPTION OF OBJECT
 {Humber of objecfs, size,
 shape, colour, brightness)
 
@@ -36,7 +36,7 @@ White and red lights.
 
 c.’
 
-EXACT POSITIOH OF OBSERVER
+EXACT POSITION OF OBSERVER
 (Location,.indoor/outdoor,
 
  
@@ -79,7 +79,7 @@ NEW towards Luton
 
 F..‘
 
-ANGLE or SIGHT
+ANGLE of SIGHT
 
 (Lstlmated Eelghtﬁ are '2
 

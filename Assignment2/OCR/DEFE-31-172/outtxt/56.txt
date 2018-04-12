@@ -1,4 +1,4 @@
- 
+﻿ 
 
 K...
 
@@ -46,9 +46,8 @@ OTHER WITNESSES
 
  
 
-' DATE AND EDDIE OF RECEIPT
-
-.1322002 Jan 82
+ DATE AND TIME OF RECEIPT
+12 Jan 82
 
  
 

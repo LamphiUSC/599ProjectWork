@@ -42,28 +42,37 @@ floodlights or night lighting)
 or dam,
 
 A. Date, Time &
-Duration of Sighting 0309203 May
-Round ball with tail.
+Duration of Sighting 
+0309203 May
 
-B. Description of Object Wh'te
-(No of objects, size, 1 /orange.
+
+B. Description of Object 
+(No of objects, size, 1 
 shape, colour, brightness)
+Round ball with tail.
+White/orange.
 
-C. Exact Position of Observer Outs@de, near DObbS Weir
-Location, indoor/outdoor, walklng “93t-
+C. Exact Position of Observer 
+Location, indoor/outdoor, 
 stationary/moving
+Outs@de, near DObbS Weir
+walklng west
 
-D. How Observed (naked eye, N k d
-binoculars, other optical a e eye.
+
+D. How Observed (naked eye, 
+binoculars, other optical 
 device, still or movie)
+Naked eye
 
-E. Direction in which object NW
+E. Direction in which object 
 first seen (A landmark may
 be more useful than a badly
 estimated bearing)
+NW
 
-F. Angle of Sight (Estimated 55°
+F. Angle of Sight (Estimated 
 heights are unreliable)
+35°
 
 G. Distance (By reference to a Engnggn, normal aeroplane
 known landmark) 918

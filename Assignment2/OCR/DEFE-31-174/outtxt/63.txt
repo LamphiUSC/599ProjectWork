@@ -22,7 +22,7 @@ Duration of Sighting
 
  
 
-Description of DbJect
+Description of ObJect
 (No of obJects: size.
 shape: colour. brightness)
 

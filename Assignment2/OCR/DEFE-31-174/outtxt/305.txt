@@ -55,7 +55,8 @@ Secﬂon40
  
 
 0. Other Witnesses (same address).
-P. Date, Time of Receipt 282115 Jun
+P. Date, Time of Receipt 
+282115 Jun
 0. Any Unusual Meteorological Nil
 Conditions
 R. Remarks Appeared to beuanother

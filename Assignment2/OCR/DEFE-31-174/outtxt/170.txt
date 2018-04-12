@@ -34,7 +34,8 @@ military, press'etc)
 N. Background of Informant that None known
 may be volunteered
 0, othermnesses —(rriend>
-P. Date, Time of Receipt 1845 hrs Sat 2 Nov 85.
+P. Date, Time of Receipt 
+1845 hrs Sat 2 Nov 85.
 Q. Any Unusual Meteorological Home
 Conditions
 R. Remarks

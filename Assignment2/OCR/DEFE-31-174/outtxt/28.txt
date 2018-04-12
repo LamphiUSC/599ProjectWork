@@ -28,30 +28,41 @@ f, ANNEX A TO 0
 ‘ SUP 'Juc /?//(/
 REPUn OF AN UNIDENTIFIED FLYING OBJECT
 
-A. Date, Time 6: 20 Oct 86 “195511
-Duration of Sighting 5 mins
+A. Date, Time 
+Duration of Sighting
+20 Oct 86 “195511
+5 mins
 
-B. Description of‘ Object Emite/Gray light
+B. Description of Object
 (No of objects, size, '[ Object
-shape, colour, brightness) Roundish
+shape, colour, brightness)
+Emite/Gray light
+Roundish
 
 Very bright
 
-C. Exact Position of Observer Outdoor walking
+C. Exact Position of Observer 
 Location, indoor/outdoor,
 stationary/moving '
 
-D. How Observed (naked eye, Naked Eye
+
+D. How Observed (naked eye, 
 binoculars, other optical
 device, still or movie)
+Naked Eye
 
-E. Direction in which object. Nelson St. East side of
-first seen (A landmark may Aberdeen, near I-Iounthooly
-be more useful than a badly Rouhd-about
+E. Direction in which object. 
+first seen (A landmark may 
+be more useful than a badly 
 estimated bearing)
 
-F. Angle of Sight. (Estimated High in the sky.
+Nelson St. East side of
+Aberdeen, near I-Iounthooly
+Rouhd-about
+
+F. Angle of Sight. (Estimated 
 heights are unreliable)
+High in the sky.
 
 G. Distance (By reference to a None given
 known landmark)

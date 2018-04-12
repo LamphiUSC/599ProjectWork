@@ -46,7 +46,8 @@ q;
  
 
 O. Other W?tnesses HRSSection 40
-P. ‘ Date, Time of Receipt 251635A MAY 86. ”M“
+P. ‘ Date, Time of Receipt 
+251635A MAY 86. ”M“
 Q. , Any Unusual Meteorological ﬁIL 2
 Conditions
 3- Remarks WHEN KITCHEN ILLUMINATED i2
