@@ -43,7 +43,9 @@ M. Name & Address of InFormant Miss S€Cﬂ0n40
 N. Background 9F Informant that Not given.
 may be volunteered
 Other Witnesses Mother (same address)
-.P. Date. Time of Receipt 121530 Oct 86
+
+.P. Date. Time of Receipt 
+121530 Oct 86
 G. Aug Unusual Meteorological None
 Conditions '
 R. Remarks None

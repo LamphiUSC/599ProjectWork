@@ -10,44 +10,31 @@ u ”I d
 
  
 
-Date, Time &
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-Duration of Sighting 052130 May
-B. Description of Object Eiggziegfegg'soggsa
+Date, Time & Duration of Sighting 
+052130 May
+B. Description of Object 
 (No of objects, size, A ring brilliant '
-shape, colour, brightness) ’ '
+shape, colour, brightness)
+Light green
+
 C. Exact Position of Observer .
-Location, indoor/outdoor, Walklng outdoors
+Location, indoor/outdoor, 
 stationary/moving
+Walklng outdoors
 D. How Observed (naked eye,
-binoculars, other optical Eye
+binoculars, other optical 
 device, still or movie)
-E. Direction in which object Above railway line
-first seen (A landmark may at Brockley
+Eye
+E. Direction in which object 
+first seen (A landmark may 
 be more useful than a badly
 estimated bearing)
-F. Angle of Sight (Estimated 75° elevation
+Above railway line
+at Brockley
+
+F. Angle of Sight (Estimated 
 heights are unreliable)
+75° elevation
 G. Distance (By reference to a Unknown
 known landmark)
 H. Movements (Changes in E, F & G In an arc.

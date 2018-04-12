@@ -10,12 +10,14 @@ A.
 
 Sighting.
 
+18 Sept 1960
+
  
 
  
 
 ’13.
-
+Description
 3335031122101? or OBJECT
 (Humber- 02 objects, size,
 shape, colour, brightness)
@@ -42,7 +44,7 @@ J stationary, moving)
 
 ID.
 
-I HOV OBSERVED
+I HOW OBSERVED
 
 8 eye, inoculars,
 other-optical devices,
@@ -52,7 +54,7 @@ still or movie)
 
 EL.
 
-DIBECTIOH IN VHICH OBJECT
+DIRECTION IN VHICH OBJECT
 F1337}? BEEN
 
 (A Eandmar'k may, ‘be moré
@@ -67,7 +69,7 @@ bearing)
 
 F.
 
--- mm: or SIGHT
+-- mm: Angle of SIGHT
 
 (Estm' ated Heights are V 4~
 

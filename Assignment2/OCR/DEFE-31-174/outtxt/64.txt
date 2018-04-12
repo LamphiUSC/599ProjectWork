@@ -26,7 +26,8 @@ London E
 N. Background 0F InFormant that Not given
 mag he volunteered
 0. Other witnesses Friend
-P. Date. Time 0? Receipt 1023502 Jul 86
+P. Date. Time of Receipt 
+1023502 Jul 86
 G. Anu Unusual Meteorological No
 
 Conditions

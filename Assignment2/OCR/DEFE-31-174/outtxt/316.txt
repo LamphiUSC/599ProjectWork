@@ -43,12 +43,9 @@ otatlonary
  
 
 How Observed
-binoculars,
-device,
-
-(naked eye,
-other optical
-still or movie)
+(naked eye, 
+binoculars, other optical
+device, still or movie)
 
 ﬂaked Eye
 Object photographed
@@ -61,11 +58,9 @@ be more useful than a badly
 estimated bearing)
 
  
-
 Angle of Sight (Estimated
 heights are unreliable)
 
-r .
 70’ elevatlon
 
  

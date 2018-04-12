@@ -1,4 +1,4 @@
-“.5
+﻿“.5
 
 O/zC'Z’“//
 
@@ -39,13 +39,14 @@ O/zC'Z’“//
 
  
 
-A; 30 Nov 84, 2045Z, for 10 mins.
+A; DATE Sighting 30 Nov 84, 2045Z, for 10 mins.
 B. DESCRIPTION 01? OBJECT Cue, no noise, a large white
 (Humber of objects, 812:, light brighter than 5 car
 shape, colour, brightness) headlights in intensity.
-(Location, inaoar7butdoor, observe.the object
+Exact position(Location, inaoar7butdoor, observe.the object
 1_atationazy, moving)
-1). A How OBSERVED Naked eye.
+Moving in a car
+How OBSERVED Naked eye.
 eye, inoculate, . , .
 other optical devices,
 still or movie)

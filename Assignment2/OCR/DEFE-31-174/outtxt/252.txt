@@ -30,7 +30,7 @@ ieighbour
  
 
 J
-' .Date, Time.cf Receipt
+' .Date, Time.of Receipt
 
 2422002 Aug 85
 
