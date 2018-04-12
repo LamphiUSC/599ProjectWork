@@ -1,4 +1,4 @@
- 
+﻿ 
 
 ‘ K. NEARBY OBJECTS ..
 [Telephone lines, high voltage ' None reported.
@@ -31,7 +31,8 @@ OTHER WITNESSES
 
  
 
-' DATE AND mm 0F RECEIPT ‘ 0119452. Dec. 84
+DATE AND TIME 0F RECEIPT
+0119452. Dec. 84
 
  
 

@@ -1,4 +1,4 @@
- 
+﻿ 
 
 1!! NEARBY OBJECTS '
 
@@ -38,7 +38,7 @@ OTHER WITNESSES _ ‘ Secuon4o age 45)
 
  
 
-' DATE AND TIHE OF RECEIPT '
+DATE AND TIME OF RECEIPT '
 252105A Oct 84
 
  

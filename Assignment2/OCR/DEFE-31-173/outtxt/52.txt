@@ -1,4 +1,4 @@
- 
+﻿ 
 
 K. NEARBY OBJECTS
 
@@ -52,10 +52,7 @@ Sutton Hill Telford.
 
  
 
-' DATE AHD'TIHE 0F RECEIPT
-
-Tell Secﬂon40
-
+DATE AND TIME 0F RECEIPT
 26 Jan 85
 25553 in AF Ops
 

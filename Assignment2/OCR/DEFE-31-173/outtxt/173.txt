@@ -1,4 +1,4 @@
- 
+﻿ 
 
  
 
@@ -77,8 +77,9 @@ Hr 8: Mrs
 
  
 
-'P.’ DATE AND mm; OF RECEIPT . 024000; Sép -
-- Q. m UNUSUAL METEOROIDGICAL .....
+DATE AND TIME OF RECEIPT
+024000Z Sep 84 
+
 
 Tc DITIONS
 R. RB‘IARKB

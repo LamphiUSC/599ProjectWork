@@ -1,4 +1,4 @@
- 
+﻿ 
 
 Egg OBJECTS '
 elephone hues, high voltage
@@ -36,9 +36,8 @@ Girlfriend _
 
  
 
-1*; mm mm mm or RECEIPI‘
-
-1622352: Oct 84
+DATE AND TIME OF RECEIPT
+162235Z Oct 84
 
  
 

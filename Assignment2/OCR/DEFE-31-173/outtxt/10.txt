@@ -1,4 +1,4 @@
-REPORT OF AN UNIDENTIFIED FLYING OBJECT
+﻿REPORT OF AN UNIDENTIFIED FLYING OBJECT
 
 D165
 ?TA
@@ -12,46 +12,30 @@ ANNEX A TQ
 Date, Time &
 Duration of Sighting
 
-47 Mar 85 1935 hrs
+17 Mar 85 1935 hrs
 10 minute intervals.
 
  
 
 Description of Object
-(No of objects, size,
-shape, colour, brightness)
-
 Banana shape,like Welsh
-light. Bright, mixture c
+light. Bright, mixture colours
 
-nn'1 n11“:-
-UULUML O.
-
- 
 
 Exact Position of Observer
-Location, indoor/outdoor,
-stationary/moving
-
-5rd Floor of Block of Flai
+3rd Floor of Block of Flai
 Indoors. Sitting down and
 Standing up. ‘
 
  
 
-How Observed (naked eye,
-binoculars, other optical
-device, still or movie)
-
+How Observed 
 Binoculars
 
  
 
 Direction in which object
-first seen (A landmark may
-be more useful than a badly
-estimated bearing)
-
+first seen 
 Hovering above Wembley
 Stadium, and in the area.
 around Wembley.
@@ -60,7 +44,6 @@ around Wembley.
 
 Angle of Sight (Estimated
 heights are unreliable)
-
 Thrugh clouds at about
 2000 to 3000 ft.
 

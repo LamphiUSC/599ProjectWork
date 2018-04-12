@@ -1,4 +1,4 @@
-'RAFSC 831
+﻿'RAFSC 831
 IN STRUCTION NO 7
 
 REPORT OF AN UNIDENTIFIED FLYING OBJECT //
@@ -6,33 +6,30 @@ REPORT OF AN UNIDENTIFIED FLYING OBJECT //
 I
 
 ' _ _ _ _ ' . tion 40'
-A. Date, Time and Durat1on of S1t1ng. (Local T1mes to be quoted). _ ‘
-
-V I20 Jul 84, 2000 Hours, approximately 50 minutes.
-
- 
-
-Description of ObIject. (Number of objects, size. shape, colours,\ {(77 g: ‘
-brightness, sound, smell, etc).
-.1, ILarge round silv_e_r pbject._ No othe r 'l1ghts viaiblé
+Date, Time and Durat1on of Sighting
+20 Jul 84, 2000 Hours, approximately 50 minutes.
 
  
 
-Exact Position 0bsérvef_ (Geographical location. Indoors or 0utdooré.Ighh_
-Stationary or moving). ‘
-Outdoors Wirksworth,- Derby._ (CS_402286)
+Description of Object
+.1, ILarge round silv_e_r pbject.
+ No othe r 'l1ghts viaiblé
 
-How Observeé." tNaked eye, b1noLulars. other opt1cal devices still or
+ 
 
-movie Cameras. H,
-" “Naked éye." ' "
+Exact Position Observation
+Outdoors Wirksworth,- Derby
+
+How Observed
+Naked eye
 
 Direction in Which 0bject was First Seén.
-; than Ia badlyI estimat'ed ‘b‘earing)
+ than Ia badlyI estimat'ed ‘b‘earing)
 
- 
+Angle
+Null
 
-‘1' DiétaﬁcéL"-(B§iréference t6 lopé laﬁdmérk wherever poséiblé).
+Distance
 
 Approx1mately 1000 feet AGL
 

@@ -1,4 +1,4 @@
- 
+﻿ 
 
 K. NEARBY OBJECTS
 (Telephone lines, high voltage
@@ -30,7 +30,8 @@ OTHER WITNESSES Secﬂon40
 
  
 
-' DATE AND TIHE 0F RECEIPT ' 2511252 N09 84
+DATE AND TIME 0F RECEIPT
+251125Z Nov 84
 
  
 

@@ -1,4 +1,4 @@
--—p—e9 ﬂjD/Efj;/§i!£>/¢§;¢f
+﻿-—p—e9 ﬂjD/Efj;/§i!£>/¢§;¢f
 
 Secﬂon40
 
@@ -11,35 +11,22 @@ REPORT OF AN UNIDEN'IIFIED FLYING OBJECT ﬁgs;
 DATE, TIME AND DURATION OF SIGHTTNG (local times to be quoted) ’ x
 16 7 84 1130-1132 I 7 0
 
-DESCRIPTION OF OBJECT (Number of objects, gize, shape, colours,
-brightness, sound, smell etc.)
-
-4...
-
+DESCRIPTION OF OBJECT
 One white ball very bright travelling fast
 
-EXACT POSITION 0F OBSERVER (Geographical location, indoors or outdoors
-stationary or moving)
-
+EXACT POSITION 0F OBSERVER 
 Smethwick, Birmingham. Stationary outdoors
 
-How OBSERVED (Naked eye, binoculars, other optical device, still or
-movie camera)
-
+How OBSERVED
 Naked eye
 
-DIRECTION IN WHICH OBJECT WAS FTRST SEEN (a landmark may be more
-useful than a badly estimated bearing)
-
+DIRECTION IN WHICH OBJECT WAS FTRST SEEN 
 No useful informaticﬁ
 
-ANGULAR ELEVATION OF OBJECT (Estimated heights are unreliable)
-
+ANGULAR ELEVATION OF OBJECT 
 Overhead
 
-DISTANCE OF OBJECT FROM OBSERVER (By reference to a known landmark
-u ’ '1
-Unable to say Wherever poss1h1e)
+DISTANCE OF OBJECT FROM OBSERVER
 
 MOVEMENTS 0F OBJECT (Changes in E, F and G may be of more use than
 . . eatimates of course and Speed)
@@ -70,7 +57,7 @@ None
 OTHER WITNESSES
 2 other family membefa
 
-DATE AND mm OF RECEIPT OF REPORT
+DATE AND TIME OF RECEIPT OF REPORT
 16 7 84 2250 g
 
  

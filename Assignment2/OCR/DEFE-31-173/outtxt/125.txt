@@ -1,4 +1,4 @@
-' )xSS' _/=3&//$/ . M
+﻿' )xSS' _/=3&//$/ . M
 
 E Secﬂon40
 
@@ -15,40 +15,22 @@ I ‘
 
 Date; Time and Duration of
 
-44 Oct 84 02301 “ Z73Qt
-
+14 Oct 84 0230A 
 10 Minutes
 
-.1 ¥’
-W
 
- 
-
-DESCRIYTIOR 0F OBJECT
-(Humber of'objecta; size,
-shape, colour, brightness)
-
+DESCRIPTION 0F OBJECT
 Circular, no size.
-
 White and red lights.
 
  
 
 EXACT POSITIOH OF OBSERVER
-(Location,_indour/outdoor,
-_ stationary, moving)
-
-S : 0.05.
-Secﬂon40
+St. Albans
 
  
 
 HOW OBSERVED
-
-{FEEeE eye, binoculars,
-other'optical devices,
-still or movie)
-
 Bedroom window by naked
 then binoculars.
 
@@ -56,25 +38,16 @@ then binoculars.
 
 DIRECTION IE BEIGE OBJECT
 IIBST SEEN _
-
-- an mar may_be more
-useful than a badly estimated
-bearing)
-
 NEW towards Luton ‘-
 
  
 
-' ANGLE or SIGHT --
-(Estlmated Heights are
-
-unreliable)
-
+ANGLE or SIGHT --
+Null
  
 
-DISTANCE "'“
-IE} reference to known
--1andmark)
+DISTANCE
+Null
 
  
 

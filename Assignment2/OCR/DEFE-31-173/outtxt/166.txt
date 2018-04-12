@@ -1,4 +1,4 @@
- 
+﻿ 
 
 .NEARBY OBJECTS
 (Telephone l1nes, high voltage
@@ -71,7 +71,9 @@ Section 40 works for an Art Gallery
 '. _ ————
 I .
 ‘ '_ 0. OTHER WITNESSES No.
-~P.‘ DATE AND TIHLE 01? RECEIPT 2000 hrs 9 gep 84, -
+DATE AND TIMEE OF RECEIPT 
+2000 hrs 9 Sep 84
+
 ' Q- ANY UNUSUAL MEOROLOGICAI' Just after a thunder storm.
 CONDITIONS . r
 n. MARKS .

@@ -1,63 +1,37 @@
-REPORT 03 AF UNIDENTIFIED FLYING bBJEcm _ /E§L¥’\\)
+﻿REPORT 03 AF UNIDENTIFIED FLYING bBJEcm _ /E§L¥’\\)
 
  
 
-Date, Time and Duration of
-_Sighting. '
-
+Date, Time and Duration of Sighting. '
 27 Apr, 15453
 
  
 
 DESCRIPTION or OBJECT
-(Humber 61—bbjecfs, size,
-shape, colour, brightness)
-
 Pﬁlsating light, white.
 
  
 
-'EIACT POSITION 0F OBSERVER
-‘(LocaTbion , inaoor/outdoor ,
-.atationary, moving)
-
+EXACT POSITION 0F OBSERVER
 Edgeware Road.
 
  
 
-'BOH OBSERVED
-
-e eye, inoculars,
-other‘optical devices,
-still or movie)
-
+HOW OBSERVED
 Naked eye.
 
  
 
 DIRECTION In WHICH OBJECT
 SEEN
-
-an ar may be moré
-useful than a badly estimated
-~bearing)
-
 Easterly.
 
  
 
-' ANGLE OF SIGHT ' "
-IEatIEated Selghta .are
+ANGLE OF SIGHT
+60 degrees
 
-unreliable)
-
- 
-
-DISTENCE
-
-IE? reference to known
-‘landmark)
-
+DISTANCE
 No idea.
 
  

@@ -1,4 +1,4 @@
- 
+﻿ 
 
 Telephone lines, high voltage
 lines, reservoir, lake or dam,
@@ -49,8 +49,7 @@ Secﬂon40 l4.yrs old)
 
  
 
-'P; DATE AND TIHE 0F RECEIPT
-
+DATE AND TIME 0F RECEIPT
 2917003 Sep 84
 
  

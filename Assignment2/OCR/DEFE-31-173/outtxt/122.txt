@@ -1,4 +1,4 @@
- 
+﻿ 
 
 . NEARBY OBJECTS
 (Telephone lines, high voltage
@@ -39,9 +39,8 @@ Section 40
 
  
 
-13; DATE AND THE 0F RECEIPT
-
-, 4921 101 OCT 84
+DATE AND THE oF RECEIPT
+1921101A OCT 84
 
  
 

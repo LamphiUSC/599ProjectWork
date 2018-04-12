@@ -1,4 +1,4 @@
- 
+﻿ 
 
 K. NEARBY OBJECTS ‘
 [Telephone lines, high voltage Hanningfield Reservoir
@@ -34,7 +34,8 @@ OTHER WITNESSES Nil
 
  
 
-' DATE mm mm 01? RECEIPT 042225 Feb '85
+DATE AND TIME OF RECEIPT 
+042225 Feb '85
 
  
 

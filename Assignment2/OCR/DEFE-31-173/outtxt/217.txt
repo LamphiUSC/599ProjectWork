@@ -1,4 +1,4 @@
- 
+﻿ 
 
 "" x.
 
@@ -45,9 +45,8 @@ His children
 
 "P;
 
-DATE 1111) EDDIE 0F RECEIPT
-
-1525102 Jui 84
+DATE AND TIME 0F RECEIPT
+152510Z July 84
 
  
 

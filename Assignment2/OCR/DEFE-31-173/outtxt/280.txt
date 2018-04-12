@@ -1,4 +1,4 @@
- 
+﻿ 
 
 o.
 
@@ -13,69 +13,40 @@ x.‘
 
  
 
-Date, Time and Duration of
-
+Date, Time and Duration of SIGHTING
 19 Apr 84 — 1945Z
 Duration 15 mins.
 
  
 
-13330111111101! 012" OBJECT
-(Humber of Objects, size,
-shape, colour, brightness)
-
-' Two objects — dish shaped -
-
+DESCRIPTION OF OBJECT
+Two objects — dish shaped -
 silver — slim — criss cross
 pattern — no lights.
 
  
 
-'IEACT POSITION 0F OBSERVER
-
-(Location,.1ﬁaoor/outﬂoor,
-
-.stationary, moving)
-
+EXACT POSITION 0F OBSERVER
 Upper-window inside house.
 
  
 
-‘HOH OBSERVED
-
-eye, inoculars,
-other'optical devices,
-still or movie)
-
+HOW OBSERVED
 Naked eye then binoculars.
 
  
 
-DIREETIOH IE UEICH OBJECT
-ITEST’BEEH _
-
-an ar may be more
-useful than a badly estimated
-
--bearing)
-
+DIRECTION IN WHICHOBJECT
 South and SE from Bromley.
 
  
 
-' ANGEE 0F SIGHT
-
-(Estfﬁated Eelghta are
-unreliable)
-
+ANGLE 0R SIGHT
 Lewish (say 25° above horizon).
 
  
 
 DISTANCE
-reference to known
--1andmark)
-
 No references
 
  

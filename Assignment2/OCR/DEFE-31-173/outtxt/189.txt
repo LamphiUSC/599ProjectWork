@@ -1,4 +1,4 @@
- 
+﻿ 
 
 .NBARBY OBJECTS -
 
@@ -42,7 +42,8 @@ Section 40
 
  
 
-"P4 DATE AND THE 0F RECEIPT 1 ’IO 111984 at 4450. houfs
+DATE AND TIME 0F RECEIPT 
+10 Aug 84 at 4450. houfs
 
  
 
