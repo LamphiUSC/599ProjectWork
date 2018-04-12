@@ -49,7 +49,7 @@ No
 
 ‘ DATE mmm 0F RECEIPT
 
-0119452 Dad 84
+0119452 Dec 84
 
  
 

@@ -21,7 +21,7 @@ Bright Light
 
  
 
-EXACT POSITIDF OF OBSERVER
+EXACT POSITION OF OBSERVER
 (Location, .1ndoar/outdoor,
 ”stationary, moving)
 
@@ -36,7 +36,7 @@ W
 
 D.
 
-BOW OBSERVED .
+HOW OBSERVED .
 
 e eye, inoculars,§
 other-optical devices.
@@ -57,7 +57,7 @@ None given.
 
  
 
-‘ ARGLE 0F SIGHT ‘ ;
+‘ ANGLE 0F SIGHT ‘ ;
 Znetlmated Eelghta ax? §
 
 unralisble)
