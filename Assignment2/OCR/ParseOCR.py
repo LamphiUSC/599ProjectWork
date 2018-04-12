@@ -62,14 +62,27 @@ def parse(filepath):
 				#print(matchedKeyword)
 				if len(matchedKeyword) > 1:
 					linesItr +=1 # to skip this data on the next line
-					linedata = lines[linesItr]
+					try:
+						linedata = lines[linesItr]
+					except:
+						print ('issue in file '+ filepath)
+						print(lines)
+						print('Issue at lineITr no data at '+ linesItr)
 					if matchedKeyword == 'sighting': # we extract date of sight and duration and date of report
 						tempCtr+=1
-						Outputdata['Duration'].append(regExpPatterns['duration'].search(linedata).group())
-						Outputdata['Date of Sighting'].append(convert(regExpPatterns['date'].search(linedata).group()))
+						regexResult = regExpPatterns['duration'].search(linedata)
+						if regexResult is not None:
+							Outputdata['Duration'].append(regexResult.group())
+						else:
+							Outputdata['Duration'].append('')
+						regexResult = regExpPatterns['date'].search(linedata)
+						if regexResult is not None:
+							Outputdata['Date of Sighting'].append(convert(regexResult.group()))
+						else:
+							Outputdata['Date of Sighting'].append('')
 					elif matchedKeyword =='description':
 						tempCtr+=1
-						Outputdata['Description'] = linedata
+						Outputdata['Description'].append(linedata)
 					elif matchedKeyword == 'location':
 						tempCtr+=1
 						if '\n' in linedata:
@@ -85,10 +98,17 @@ for subdir in os.listdir(rootdir):
 	print('inside subdir')
 	for files in os.walk(str(subdir)+'/outtxt/'):
 		fileCountItr = len(files[2])+1
-		for i in range(1,fileCountItr):  #change back to 1 , fileCountItr
+		for i in range(4,5):  #TO DO : change back to 1 , fileCountItr
 			#print(str(subdir)+'/outtxt/'+ str(i)+'.txt')
 			parse(str(subdir)+'/outtxt/'+ str(i)+'.txt')
 			i = i+1
 
 print(Outputdata)
-
+tsvout=open('ufo_awesome_FINAL_OUTPUT.tsv', 'a')
+tsvout.write('\n')
+irtlen = len(Outputdata['Date of Sighting'])
+for i in range(irtlen):
+	tsvout.write(Outputdata['Date of Sighting'][i]+'\t'+ Outputdata['Date of Sighting'][i]+ \
+				 '\t'+Outputdata['Location'][i]+ '\t'+ ''+ \
+				 '\t'+ Outputdata['Duration'][i]+ '\t'+ Outputdata['Description'][i])
+	tsvout.write('\n')
