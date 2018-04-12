@@ -17,7 +17,6 @@ QEQE :02 T0
 
 Date. Time &
 Duration of Sighting
-
 171835 Local Nov.87
 About two hrs continuing.
 
@@ -28,21 +27,19 @@ Description of Object
 shape. colour: brightness)
 
 Bright white glowing light.
-
 No shape or body seen.
 
  
 
 Exact Position of Observer
-Location. indoorlautdoor.
+Location. indoor/outdoor.
 stationarg/moving
-
-Indopr and outdoor.
-Moving sloulg.
+Indoor and outdoor.
+Moving slowly.
 
  
 
-How Observed (naked age.
+How Observed (naked eye.
 binoculars. other optical
 device. still or movie
 
@@ -50,7 +47,7 @@ Naked Ege and binocular.
 
  
 
-Direction in which obJect
+Direction in which object
 first seen (A landmark mag
 be more useful than a badlg
 estimated bearing)

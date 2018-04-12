@@ -33,9 +33,9 @@ Section 40
 
  
 
-Date. Time 0? Receipt
+Date. Time of Receipt
 
-0522152 Jan_87
+052215Z Jan_87
 
  
 

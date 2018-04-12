@@ -11,11 +11,11 @@ Date. Time &
 Duration of Sighting
 
 272115 Local Aug 97
-2 Nina
+2 Mins
 
  
 
-Description of DbJect
+Description of obJect
 (Na 0F obJects. size;
 shape. coluur. brightness)
 
@@ -31,7 +31,7 @@ Outdoors
 
  
 
-Haw Observed (naked eye.
+How Observed (naked eye.
 binaculars. other optical
 'device. still or movie
 

@@ -16,7 +16,7 @@ Date. Time &
 Duration of Sighting
 
 012205 Local Sep 87
-1“; Nina
+1_2 Mins
 
  
 
@@ -27,7 +27,6 @@ shape: colour. brightness)
 1 Cigar shaped obJect
 Gold/Drange
 Bright/lights out
-
 on descent
 
  
@@ -53,7 +52,7 @@ Naked Eue
 
  
 
-Direction in which abJect
+Direction in which obJect
 First seen (A landmark mag
 be more useful than a badlu
 estimated bearing)

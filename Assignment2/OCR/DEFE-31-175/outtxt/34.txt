@@ -18,7 +18,7 @@ Duration of Sighting
 
  
 
-Description oF DbJect
+Description oF obJect
 (No of ubJects. size.
 shape. colour. brightness)
 
@@ -46,7 +46,7 @@ Naked qu
 
  
 
-Direction in which ahJect
+Direction in which obJect
 First seen (A landmark may
 be more useful than a badlu
 estimated hearing)

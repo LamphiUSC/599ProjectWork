@@ -15,7 +15,7 @@ Duratian OF Sighting
 
  
 
-Description of'DbJect
+Description ofobJect
 (No aF'obJects. size.
 shape; colour. brightness)
 
@@ -24,7 +24,7 @@ large. white Far swam
 
  
 
-Exacf Position 0F Observer
+Exact Position 0F Observer
 Location: indoor/outdaor{
 stationarg/moving
 
@@ -32,7 +32,7 @@ Outside
 
  
 
-Haw Observed (naked Eye.
+How Observed (naked Eye.
 binoculars. other optical
 device. still or movie
 
@@ -40,7 +40,7 @@ Naked age.
 
  
 
-Direction in which abJect
+Direction in which obJect
 First seen (A landmark mag
 be more useful than a badlg
 estimated bearing}

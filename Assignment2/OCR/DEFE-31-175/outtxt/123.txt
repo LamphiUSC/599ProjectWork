@@ -14,7 +14,7 @@ Duration of Sighting
 
  
 
-Description OF DbJect
+Description OF obJect
 (No of abJects. size.
 shape. colour: brightness)
 
@@ -24,7 +24,7 @@ which were also white
 
  
 
-Exact Positinn 0F Dbservér
+Exact Positinn 0F observer
 Location. indoor/outdoor,
 stationarg/moving
 
@@ -32,7 +32,7 @@ Dutdaor/Stationarg
 
  
 
-Hum Observed {naked age.
+How Observed {naked age.
 binoculars; other optical
 device. still or movie
 

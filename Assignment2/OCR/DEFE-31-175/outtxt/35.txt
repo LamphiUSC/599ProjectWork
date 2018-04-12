@@ -20,7 +20,8 @@ Other witnesses
 
 ‘—-
 
-Date. Time 0% Receipt 230520 Local Oct 87
+Date. Time of Receipt
+230520 Local Oct 87
 
  
 

@@ -30,7 +30,7 @@ Section 40
 
  
 
-Date. Time 0? Receipt”
+Date. Time of Receipt
 
 212020 Local Oct 37
 
