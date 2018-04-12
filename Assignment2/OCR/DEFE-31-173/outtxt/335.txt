@@ -8,62 +8,40 @@ f .
 
  
 
-Date, Time and Duration of
+Date, Time and Duration of Sighting.
 
-‘ Sighting.
 
-"“7"?
-,‘_[(r
-
-1020002 Jan 84 \
-
+1020002 Jan 84 
  
 
 B.
 
-DESCRIPTION OF OBJECT
-(Eﬁﬁber or objects, size,
-shape, colour, brightness)
+DESCRIPTION OF OBJECT (Eﬁﬁber or objects, size, shape, colour, brightness)
 
-?_Ehite lights in a line.
-Pulsating '
+3 WHITE lights in a line.Pulsating '
 
  
 
 C.
 
-'EXACT POSITION 0F OBSERVER
+'EXACT POSITION OF OBSERVER (Locéfibn,_indoor/outdoor, stationary, moving)
 
-(Locéfibn,_indoor/outdoor,
-stationary, moving)
-
-Outside in the village of
-WISSENDINE, 4 miles West of
+Outside in the village of WISSENDINE, 4 miles West of
 Cottesmore
 
  
 
 D.
 
-HOV OBSERVED
+HOW OBSERVED naked eye, inoculars,other'optical devices,still or movie)
 
-e eye, inoculars,
-other'optical devices,
-still or movie)
-
-Naked éye
+Naked eye
 
  
 
 E.
 
-DIRECTION In men OBJECT
-IIRET'EEEE“"""‘""“
-
-(I-Ianaﬁark may be moré
-useful than a bgdly estimated
-
-=bearing)
+DIRECTION In men OBJECT IIRET'EEEE“"""‘""“ (I-Ianaﬁark may be moré useful than a bgdly estimated =bearing)
 
 Coming over the village
 
@@ -71,11 +49,8 @@ Coming over the village
 
 F.
 
-- ANGIE or SIGHT
-
-unreliable)
-
-(Eatlmated Eelghts are.
+- ANGLE or SIGHT unreliable) 
+25 degrees
 
  
 

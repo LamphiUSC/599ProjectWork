@@ -1,6 +1,6 @@
  
 
-K. NE.EEBY OBJECTS '
+K. NEARBY OBJECTS '
 Welephone lines, high voltage
 lines, reservoir, lake or dam, .
 swamp or marsh, river, high ‘
@@ -61,7 +61,8 @@ Section 40
 
  
 
-Date 5 Dec 85
+RECEIPT Date 
+5 Dec 85
 
 s. I 1100 I21? cps
 

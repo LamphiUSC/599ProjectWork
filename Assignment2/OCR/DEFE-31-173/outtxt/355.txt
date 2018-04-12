@@ -7,29 +7,19 @@ _‘I_ / vSecﬂon4O
 
  
 
-Date,zﬂiﬁe ﬁnd Duration of
-Sighting. _
+Date,zﬂiﬁe ﬁnd Duration of Sighting. _
 
-q .
-
-Rednesday 14 Dec 83
-A few seconds
+14 Dec 83 A few seconds
 
  
 
-DESCRIPTION or OBJECT
-(Eumbér oi objects, size, .
-shape,*cqldu;, brightness)
+DESCRIPTION OF OBJECT (Eumbér oi objects, size, . shape,*cqldu;, brightness)
 
-One very,very bright white flash of
-
-light.
+One very,very bright white flash of light.
 
  
 
-EXACT rosimloa OF-OESERVEB
-(Location,,iﬁEbor/outdoor,
-stationary, moving)
+EXACT POSITION OF OBSERVER (Location,,iﬁEbor/outdoor, stationary, moving)
 
 -In the village of Wargrave, Nr Reading,
 
@@ -40,23 +30,13 @@ tree tap level.
 
  
 
-BO? OBSERVED
+HOW OBSERVED -- e eye, inoculars, other'optical devices, still or movie) -
 
--- e eye, inoculars,
-other'optical devices,
-
-still or movie) -
-
-Baked eye
+Naked eye
 
  
 
-DIRECTION IE WHICH OBJECT
-leST SEEN “
-
-(I Iandmark may be more -
-useful than a badly estimated
-' bearing)
+DIRECTION IN WHICH OBJECT first SEEN “ (I landmark may be more - useful than a badly estimated ' bearing)
 
 Heading East to Hesf towards Henley.
 
@@ -64,10 +44,7 @@ Heading East to Hesf towards Henley.
 
  
 
-- AHGLE or SIGHT
-
-(Lstlmated Eelghta are
-unreliable)
+- ANGLE OF SIGHT (Lstlmated Eelghta are unreliable)
 
  
 

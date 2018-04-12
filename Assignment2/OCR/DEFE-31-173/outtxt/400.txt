@@ -4,18 +4,15 @@ __ "29>
 
  
 
-Date, mine and Duration of
-Sighting. '
+Date, mine and Duration of Sighting. '
 
-2816222 Nov 83
+2816222 Nov 83 
 
 Approximately 1 minute
 
  
 
-IEBCBIPTIOH or OBJECT
-(Eunber of objects, 312.;
-' shape, colour, brightness)
+DESCRIPTION OF OBJECT (Eunber of objects, 312.; ' shape, colour, brightness)
 
 -"Two lights in close line astern
 
@@ -25,42 +22,27 @@ White rear light was occultina
 
  
 
-"EIAGT POSITION or dssxnvsn_
-(Location, .1ndoorfoutdoor,
-stationary, moving)
+"EXACT POSITION or dssxnvsn_ (Location, .1ndoorfoutdoor, stationary, moving)
 
-SKENE SQUARE'
-
-'ABERDEEN
+SKENE SQUARE''ABERDEEN
 
 Outdoors and standiﬁg still
 
  
 
-EDP OBSERVED
-
-e eye, inoculara,
-other'optical devices,
-still or movie)
+HOW OBSERVED  inoculara,other'optical devices,still or movie)
 
 - Naked eye
 
  
 
-DIRECTION IH‘UHICH 031101
-1133! BEEN
-
-an 1: may he more
-useful than a badly estimated
-bearing)
+DIRECTION IH‘UHICH 031101 133! BEEN an 1: may he more useful than a badly estimated bearing)
 
 Looking North
 
  
 
-- ANGEE or SIGHT
-(Latimated Heights are
-unrelidble)
+ANGLE OF SIGHT (Latimated Heights are unrelidble)
 
 60° to 70° above the horizon
 

@@ -79,9 +79,9 @@ Mr & Mrs Section 40
 R.‘ MARKS"; IVA; '
 - f‘\
 Section 40
-Date
+RECEIPT Date
 
-%0 J11] 8% ‘
+30 July 83 ‘
 
  
 
