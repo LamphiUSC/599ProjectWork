@@ -4,23 +4,19 @@ from collections import defaultdict
 from autocorrect import spell
 import enchant
 import os
-# Outputdata = {}
-# dictkeys = ['Date of Sighting', 'Location', 'Shape', 'Duration', 'Description']
-# # we will have 'Date of Report' = Date of Sighting as we are unable to extract any field like date of reports
-# for k in dictkeys:
-# 	Outputdata[k] = []
+
 
 Result = []
 
 
 rootdir = 'OCR_Output'
 regExpPatterns = {}
-regExpPatterns['duration'] = re.compile('\d+\s*mins|\d+\s*se[a-z]*|\d+\s*secs|\d+\s*minutes|\d+\s*seconds|\d+\s*h[a-z]*rs')
+regExpPatterns['duration'] = re.compile('(\d+[a-z]+)\s*mins|(\d+[a-z]+)\s*minute|\d+\s*se[a-z]*|\d+\s*secs|\d+\s*minutes|\d+\s*seconds|\d+\s*h[a-z]*rs|still there')
 regExpPatterns['date'] = re.compile(r'\d+\s*\b(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june|july|aug(?:ust)?|sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\s*\d+')
 regExpPatterns['year'] = re.compile('\d+$') # to extract year datetime string
 regExpPatterns['DescQuestionnaire'] = re.compile('number of|object|size|shape|colour')
-regExpPatterns['LocQuestionnaire'] = re.compile('pos[a-z]*\s*|of\s*[a-z]*observer[a-z]*|[a-z]*mov[a-z]*|[a-z]*loc[a-z]*[0-9][a-z]*door[a-z]*|stat[a-z]*')
-regExpPatterns['SightingQuestionnaire'] = re.compile('[a-z]*local\s*[a-z]*\s*[a-z]*[0-9]*\s*[a-z]*\s*quoted')
+regExpPatterns['LocQuestionnaire'] = re.compile('pos[a-z]*\s*|of\s*[a-z]*observer[a-z]*|[a-z]*mov[a-z]*|[a-z]*loc(.*)door(.*)|stat[a-z]*')
+regExpPatterns['SightingQuestionnaire'] = re.compile('[a-z]*local\s*[a-z]*\s*[a-z]*[0-9]*\s*[a-z]*\s*(quoted|quetedb)')
 # regExpPatterns['Pos_OBSERVER_Loc'] = re.compile('OBSERVER = (.*)\n')
 # regExpPatterns['HOW_Observed_Desc'] = re.compile('OBSERVED = (.*)\n')
 # regExpPatterns['Direction_Desc'] = re.compile('OBSERVED = (.*)\n')
@@ -30,10 +26,10 @@ regExpPatterns['SightingQuestionnaire'] = re.compile('[a-z]*local\s*[a-z]*\s*[a-
 # regularExpressions['MET_Observed_Desc'] = re.compile('OBSERVED = (.*)\n')
 
 keywords = {}
-keywords['sighting']= re.compile('sighting(.*)description')
-keywords['description'] = re.compile('description(.*)exact')
-keywords['location'] = re.compile(r'\b(loc|pos|exact[a-z]*of observer)(.*)[a-z]*ow observed')
-possibleShapes =['light','ball','round','circular','flash','dome','pyramid','diagonal']
+keywords['sighting']= re.compile('sighting(.*)description',re.DOTALL)
+keywords['description'] = re.compile('description(.*)exact',re.DOTALL)
+keywords['location'] = re.compile('exact pos(.*)ow observed',re.DOTALL)
+possibleShapes =['10 PENCE','cigar','cylinder','light','ball','round','circular','flash','dome','pyramid','diagonal','sphere']
 #'how_observed_Desc','direction_desc','angleofsight_desc','distance','movements','met_observed_desc'
 
 
@@ -66,6 +62,7 @@ def parse(filepath):
 		content = ''.join(lines)
 		tempCtr = 0
 		if 'flying' in content:  #  or 'aerial' or 'ministry'
+			#print(filepath)
 			for keyword, keywordRegex in keywords.items():
 				reqData=''
 				regexSearchRes = keywordRegex.search(content)
@@ -91,7 +88,7 @@ def parse(filepath):
 						desc = regExpPatterns['DescQuestionnaire'].sub('',reqData)
 						for s in possibleShapes:
 							if s in desc:
-								shape +=s
+								shape +=s+','
 						# TO DO : get shape also
 					elif keyword == 'location':
 						tempCtr += 1
@@ -100,8 +97,10 @@ def parse(filepath):
 						#reqData.replace( regExpPatterns['LocQuestionnaire'].group(),'',1)
 						location = regExpPatterns['LocQuestionnaire'].sub('',reqData)
 						#location.replace('moving','', 1)
-		if tempCtr == len(keywords):
-			Result.append( filepath+'\t' +date_of_sight + '\t' + date_of_sight + '\t' + location +  '\t'  + shape + '\t'  + duration +  '\t'  + desc)
+			if tempCtr > 1: # (>1)s
+				Result.append( filepath+'\t' +date_of_sight + '\t' + date_of_sight + '\t' + location +  '\t'  + shape + '\t'  + duration +  '\t'  + desc)
+			# else:
+			# 	print(filepath)
 
 
 
@@ -164,18 +163,18 @@ def parse(filepath):
 
 
 for subdir in os.listdir(rootdir):
-	print('inside subdir')
-	for files in os.walk(str(subdir)+'/outtxt/'):
+	#print('inside subdir '+ subdir)
+	for files in os.walk(rootdir + '/' + str(subdir) + '/outtxt'):
 		fileCountItr = len(files[2])+1
-		for i in range(39,fileCountItr):  #TO DO : change back to 1 , fileCountItr
+		for i in range(1,fileCountItr):  #TO DO : change back to 1 , fileCountItr
 			#print(str(subdir)+'/outtxt/'+ str(i)+'.txt')
-			parse(str(subdir)+'/outtxt/'+ str(i)+'.txt')
+			parse(rootdir + '/'+str(subdir)+'/outtxt/'+ str(i)+'.txt')
 			i = i+1
 
 #print(Result)
-print(len(Result))
-for res in Result:
-	print(res)
+# print(len(Result))
+# for res in Result:
+# 	print(res)
 
 tsvout=open('tempOutput.tsv', 'w')
 for res in Result:
