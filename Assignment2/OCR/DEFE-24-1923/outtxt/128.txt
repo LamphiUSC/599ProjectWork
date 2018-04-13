@@ -2,9 +2,7 @@
 
 < "~*va
 
-REPORT
-
-OF AN UNIDENTIFIED FLYING OBJECT
+REPORTOF AN UNIDENTIFIED FLYING OBJECT
 
  
 
@@ -31,7 +29,7 @@ One
 
  
 
-Exact Pasition of Observer
+Exact Position of Observer
 Lgcationg indoor/outdoor,
 stationary/moving
 

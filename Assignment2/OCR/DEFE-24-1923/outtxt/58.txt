@@ -7,7 +7,7 @@ EDI 5‘6” ,,
 A. Date, time and duration of Sighting. (Local times to be quoted).
 Mime? 14M 933‘
 
-B. Deacrigtion of obgect. (Kumber of objects, size, Shape, colours, brightness,
+B. Description of obgect. (Kumber of objects, size, Shape, colours, brightness,
 
 sound, smell, etc .
 ?Mﬁm A4 T/llﬂx’

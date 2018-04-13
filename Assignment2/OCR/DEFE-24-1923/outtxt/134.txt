@@ -13,7 +13,7 @@ Duration of Sighting
 
  
 
-escrlptlon of Object'
+Description of Object'
 ﬁn f objects, size,
 colour, brightness)
 
