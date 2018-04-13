@@ -27,7 +27,7 @@ driver.get(url)
 
 #extracting the image urls from event id 0-20k
 f = open('urls_images1.txt', 'a',0)
-for i in range(0,20000):
+for i in range(1,20000):
     try:
         url = "http://www.ufostalker.com/event/"+str(i)
         driver.get(url)
