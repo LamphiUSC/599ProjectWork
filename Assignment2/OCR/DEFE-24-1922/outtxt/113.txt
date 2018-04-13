@@ -6,23 +6,15 @@
 
 A.
 
-‘ Date; Time and
+‘ Date; Time and Sighting.
 
-Sighting.
-
-18 Sept 1960
+18 Sept 1960 for about 3 mins.
 
  
 
  
+Description 3335031122101? or OBJECT (Humber- 02 objects, size,shape, colour, brightness)
 
-’13.
-Description
-3335031122101? or OBJECT
-(Humber- 02 objects, size,
-shape, colour, brightness)
-
-@ﬂmﬁ $34
 
 Taggigfﬂmrzméﬁfa;dhiomm' Aﬁ)¢%ﬂ£
 
@@ -30,7 +22,7 @@ Taggigfﬂmrzméﬁfa;dhiomm' Aﬁ)¢%ﬂ£
 
 C.
 
-’ EXACT POSITION or OBSERVER
+’ EXACT POSITION OF  OBSERVER
 
 (Location ,,_ .inﬁoor/uutaoor,
 

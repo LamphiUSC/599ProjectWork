@@ -47,9 +47,9 @@ No
 
  
 
-‘ DATE mmm 0F RECEIPT
+‘ DATE mmm OF RECEIPT
 
-0119452 Dec 84
+01 Dec 84
 
  
 
