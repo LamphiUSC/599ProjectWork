@@ -2,7 +2,8 @@ There are 2 major sub-folders in the Assignment. First "OCR" to use ocr-pipeline
 
 
 The main input file containing the ufo data is :- 
-ufo_awesome_FINAL_OUTPUT.tsv
+(we took the output file from assignment 1 and renamed it _v2)
+ufo_awesome_FINAL_OUTPUT_v2.tsv
 
 The intermediate files are as following:-
 OCR/OCR_TSV_final.tsv
