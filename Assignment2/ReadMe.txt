@@ -49,8 +49,8 @@ It then parses the data meant for each keyword. Since tesseract produced lot of 
 -- This program is used to take all the scraped urls_images[1-5].txt files and combine them all and store just the unique ones in the file image_urls.txt. This new text file is in turn used  for Image captioning and object recognition.
 
 
-6) download images.py
--- This python script downloads all the images from the scraped URL's
+6) download_images.py
+-- This python script downloads all the images from the scraped URL's and generate a file with list of filenames which will be passed to genCapAndObj.java
 
 
 7) genCapAndObj.java
