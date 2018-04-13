@@ -1,6 +1,6 @@
 import csv
 # open final output file from assignment 1 in append mode
-tsvout=open('ufo_awesome_FINAL_OUTPUT_2.tsv', mode='a',encoding='ISO-8859-1')
+tsvout=open('../ufo_awesome_FINAL_OUTPUT_v2.tsv', mode='a',encoding='ISO-8859-1')
 
 # read the ocr tsv file
 with open('OCR_TSV_final.tsv',mode='r',encoding='ISO-8859-1') as ocr_tsv:
