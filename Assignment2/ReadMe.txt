@@ -45,11 +45,23 @@ It then parses the data meant for each keyword. Since tesseract produced lot of 
 
 
 5) combine_urls.py
--- This program is used to take all the scapred urls_images[1-5].txt files and combine them all and store just the unique ones in the file image_urls.txt. This new text file is inturn used by the OCR pipeline for captioning and defining the objects from the images.
+-- This program is used to take all the scapred urls_images[1-5].txt files and combine them all and store just the unique ones in the file image_urls.txt. This new text file is inturn used  for Image captioning and object recognition.
 
+6) download images.py
+-- This python script downloads all the images from the scraped URL's
 
+7) genCapAndObj.java
+-- This java code takes the list of all the image filenames and the downloaded images in the previous step as input. Then it genenerates following three features
+a) Recognized Objects :- This is done using Object Recognition Docker
+b) Image Captions :- This done using the corresponding Image Captioning Docker.
+c) Metadata Features :- Date of Sighting, Geolocation, Caption(From Metadata)
+This program generates the features and populates it in an output file :- final_list
 
+8) Featurizer.py
+-- This python script works on the featurezied file(final_list) and generates a pickle file containing properly formatted features. It does the requires date/timestamp formatting, enerating geolocation and string formatting of the image captions.
 
+9)MergeFeatures.py
+-- This python scipt merges the the features generated from OCR pipline with the Object recognition and Image captioning features into one TSV
 
 The order in which the programs need to be executed:
 1) ocr_pipeline.sh 
@@ -57,4 +69,8 @@ The order in which the programs need to be executed:
 3) Date_parse.py
 4) url_extract[1-4].py
 5) combine_urls.py
+6) download images.py
+7) genCapAndObj.java
+8) Featurizer.py
+9) MergeFeatures.py
 
