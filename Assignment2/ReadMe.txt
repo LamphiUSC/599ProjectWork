@@ -57,7 +57,7 @@ It then parses the data meant for each keyword. Since tesseract produced lot of 
 -- This java code takes the list of all the image filenames and the downloaded images in the previous step as input. Then it generates following three features
 a) Recognized Objects :- This is done using Object Recognition Docker
 b) Image Captions :- This done using the corresponding Image Captioning Docker.
-c) Metadata Features :- Date of Sighting, Geolocation, Caption(From Metadata)
+c) Metadata Features :- Date of Sighting, Geolocation.
 This program generates the features and populates it in an output file :- final_list
 
 
@@ -67,7 +67,6 @@ This program generates the features and populates it in an output file :- final_
 
 9)MergeFeatures.py
 -- This python scipt merges the the features generated from OCR pipeline with the Object recognition and Image captioning features into one TSV
-
 
 The order in which the programs need to be executed:
 1) ocr_pipeline.sh 
