@@ -1,4 +1,7 @@
-There are 2 major sub-folders in the Assignment. First "OCR" to use ocr-pipeline on British UFO PDF files to extract the data and parse them into TSV, and Second "UFO_Stalker" for scraping the UFO stalker website to fetch the image URLs.
+There are 3 major sub-folders in the Assignment. 
+First "OCR" to use ocr-pipeline on British UFO PDF files to extract the data and parse them into TSV, and 
+Second "UFO_Stalker" for scraping the UFO stalker website to fetch the image URLs.
+Third "NER". It contain Tika NER code and the input and output files.
 
 
 The main input file containing the ufo data is :- 
@@ -18,6 +21,10 @@ imagemagick install - https://www.imagemagick.org/script/download.php
 brew install tesseract
 brew install ghostscript
 
+Information about the records in the fina TSV file:- ufo_awesome_FINAL_OUTPUT_v2.tsv
+1) Record 1 - 61068 ---> Old ufo_awesome_FINAL_OUTPUT_v1 TSV records of Assignment 1
+2) Record 61069 - 61207 ---> OCR records
+3) Record 61208 - 66583 --> UFO stalker Image records.
 
 The important files present in the folders are :-
 
@@ -71,6 +78,7 @@ This program generates the features and populates it in an output file :- final_
 
 10) tikaNER.java
 -- This java code generates four NER features(NER_PERSON, NER_LOCATION, NER_ORGANIZATION, NER_DATE) from the Description column of the dataset. We used Apache OpenNLP for NER tagging.
+Once the Tika features were generated they were merged with the final TSV
 
 The order in which the programs need to be executed:
 1) ocr_pipeline.sh 
