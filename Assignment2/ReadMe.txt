@@ -38,6 +38,9 @@ It then parses the data meant for each keyword. Since tesseract produced lot of 
 
 3)Date_parse.py
 
+3.1) MergeTSV.py
+-- Python script to append the new sighting rows from OCR output to the UFO final output from assignment 1. It takes tsv file with OCR rows and modifies the   UFO final output (from assignment 1) by appending these rows. 
+
 
 4) url_extract[1-4].py
 -- The UFO Stalker website has urls ranging from the event id 1 to event id 91148. To scrape all these events from the UFO stalker website, we have written 5 programs - url_extract.py, url_extract1.py, .... ,url_extract4.py where each program is run parallely and executes ~20000 event ids to scapre the image urls.
@@ -67,6 +70,7 @@ The order in which the programs need to be executed:
 1) ocr_pipeline.sh 
 2) OCR_parse.py
 3) Date_parse.py
+3.1) MergeTSV.py
 4) url_extract[1-4].py
 5) combine_urls.py
 6) download images.py
