@@ -24,7 +24,7 @@ public class tikaNER {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		//NER Tika config
-		final String CONFIG_NER = "/home/aashish/tika1/tika/tika-parsers/src/test/resources/org/apache/tika/parser/ner/tika-config.xml";
+		final String CONFIG_NER = "./tika-config.xml";
 		InputStream ner_config = new FileInputStream(CONFIG_NER);
 		
 		Tika tikaNER = new Tika(new TikaConfig(ner_config));
