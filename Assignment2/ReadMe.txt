@@ -69,6 +69,9 @@ This program generates the features and populates it in an output file :- final_
 9)MergeFeatures.py
 -- This python scipt merges the the features generated from OCR pipeline with the Object recognition and Image captioning features into one TSV
 
+10) tikaNER.java
+-- This java code generates four NER features(NER_PERSON, NER_LOCATION, NER_ORGANIZATION, NER_DATE) from the Description column of the dataset. We used Apache OpenNLP for NER tagging.
+
 The order in which the programs need to be executed:
 1) ocr_pipeline.sh 
 2) OCR_parse.py
@@ -79,4 +82,4 @@ The order in which the programs need to be executed:
 7) genCapAndObj.java
 8) Featurizer.py
 9) MergeFeatures.py
-
+10) tikaNER.java
