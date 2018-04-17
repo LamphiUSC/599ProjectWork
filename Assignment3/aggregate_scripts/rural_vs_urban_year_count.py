@@ -27,7 +27,7 @@ for row in reader:
 		year_dict[year]["Urban"]=year_dict[year]["Urban"]+1
 	
 for key in year_dict:
-	if year_dict[key]["Rural"] !=0 and year_dict[key]["Urban"] != 0:
+	if year_dict[key]["Rural"] !=0 or year_dict[key]["Urban"] != 0:
 		print key, year_dict[key]
 		output.write(str(key)+'\t'+str(year_dict[key]["Rural"])+'\t'+str(year_dict[key]["Urban"])+'\n')
 

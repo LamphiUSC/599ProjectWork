@@ -27,6 +27,6 @@ for row in reader:
 		year_dict[year]["sighting"]=sighting_count
 	
 for key in year_dict:
-	if year_dict[key]["sci-fi"] !=0 and year_dict[key]["sighting"] != 0:
+	if year_dict[key]["sci-fi"] !=0 or year_dict[key]["sighting"] != 0:
 		print key, year_dict[key]
 		output.write(str(key)+'\t'+str(year_dict[key]["sighting"])+'\t'+str(year_dict[key]["sci-fi"])+'\n')
