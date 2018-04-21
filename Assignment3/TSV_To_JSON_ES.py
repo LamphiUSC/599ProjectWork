@@ -7,7 +7,7 @@ index_name="bigdata"
 es = Elasticsearch(['localhost:9200'])
 
 count=0
-with open('UFO_Awesome_V3.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') as tsv_in:
+with open('UFO_Awesome_V2.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') as tsv_in:
 	next(tsv_in,None)
 	for line in tsv_in:
 		tempList = line.strip().replace('"','').split("\t")
@@ -27,5 +27,6 @@ with open('UFO_Awesome_V3.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v
 										   "Image Filename": tempList[21], "Object Recognized in image": tempList[22],   "Image Caption": tempList[23],
 										   "NER_PERSON": tempList[24], "NER_LOCATION": tempList[25], "NER_ORGANIZATION": tempList[26],
 										   "NER_DATE": tempList[27] })
+		json.dump(j, output, indent=4)
 		count=count+1
 		res = es.index(index=index_name, doc_type='assignment3', id=count, body=j)
