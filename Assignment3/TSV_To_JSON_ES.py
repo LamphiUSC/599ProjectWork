@@ -1,5 +1,13 @@
 import json
-with open('UFO_Awesome_V2.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') as tsv_in:
+from elasticsearch import Elasticsearch
+import sys, json
+import requests
+
+index_name="bigdata"
+es = Elasticsearch(['localhost:9200'])
+
+count=0
+with open('UFO_Awesome_V3.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') as tsv_in:
 	next(tsv_in,None)
 	for line in tsv_in:
 		tempList = line.strip().replace('"','').split("\t")
@@ -7,7 +15,9 @@ with open('UFO_Awesome_V2.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v
 		if len_tempList < 28:
 			for i in range(len_tempList,28):
 				tempList.append('')
-		json.dump({"sighted_at": tempList[0],"reported_at": tempList[1], "location": tempList[2].strip(),
+		
+
+		j = json.dumps({"sighted_at": tempList[0],"reported_at": tempList[1], "location": tempList[2].strip(),
 										   "shape": tempList[3], "duration": tempList[4],  "description": tempList[5],
 										   "latitude": tempList[6], "longitude": tempList[7],	"NearestAirport": tempList[8],
 										   "Distance": tempList[9], "MeteorName": tempList[10], "Meteordistance": tempList[11],
@@ -16,4 +26,6 @@ with open('UFO_Awesome_V2.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v
 										   "Population Density": tempList[18], "Housing Denisty": tempList[19], "Rural?": tempList[20],
 										   "Image Filename": tempList[21], "Object Recognized in image": tempList[22],   "Image Caption": tempList[23],
 										   "NER_PERSON": tempList[24], "NER_LOCATION": tempList[25], "NER_ORGANIZATION": tempList[26],
-										   "NER_DATE": tempList[27] },output,indent=4)
+										   "NER_DATE": tempList[27] })
+		count=count+1
+		res = es.index(index=index_name, doc_type='assignment3', id=count, body=j)
