@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="liquidFillGauge.js" language="JavaScript"></script>
+    <style>
+        .liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+    </style>
+</head>
+<body id="body">
+
+<div id="chart"></div>
+
+<script language="JavaScript">
+
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    var config = liquidFillGaugeDefaultSettings();
+    config.circleThickness = 0.1;
+    config.circleFillGap = 0.2;
+    config.textVertPosition = 0.8;
+    config.waveAnimateTime = 2000;
+    config.waveHeight = 0.3;
+    config.waveCount = 1;
+
+
+    $.getJSON('data.json', function(data) {
+        population = data["Data"]
+
+        for(var i=0 ; i<population.length ; i++) {
+
+            <!--var tbl = document.createElement('table');-->
+            <!--var tr1 = document.createElement('tr');-->
+            <!--var td1 = document.createElement('td');-->
+            <!--td1.setAttribute("id", "chartArea");-->
+            <!--tr1.appendChild(td1)-->
+            <!--var tr2 = document.createElement('tr');-->
+            <!--var td2 = document.createElement('td');-->
+            <!--td2.setAttribute("id", "textArea");-->
+            <!--tr2.appendChild(td2)-->
+            <!--tbl.appendChild(tr1)-->
+            <!--tbl.appendChild(tr2)-->
+
+            <!--$("#chart").append(tbl);-->
+
+            <!--var vis = d3.select("#chartArea").append("svg:svg")-->
+                <!--.attr("width", "20%")-->
+                <!--.attr("height", "200")-->
+                <!--.attr("id", "fillgauge"+population[i]["Year"])-->
+                <!--.append("svg:title")-->
+                    <!--.text(population[i]["Year"]);-->
+
+            <!--$("#textArea").append("<b>"+population[i]["Year"]+"</b>");-->
+
+            var vis = d3.select("#chart").append("svg:svg")
+                .attr("width", "20%")
+                .attr("height", "200")
+                .attr("id", "fillgauge"+population[i]["Year"])
+                .append("svg:title")
+                    .text(population[i]["Year"]);
+
+            color = getRandomColor();
+            config.circleColor = color;
+            config.textColor = "black";
+            config.waveTextColor = color;
+            config.waveColor = color;
+            var gauge = loadLiquidFillGauge("fillgauge"+population[i]["Year"], population[i]["Percent"], config);
+        }
+    });
+
+
+</script>
+</body>
+</html>
