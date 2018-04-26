@@ -5,19 +5,34 @@ import requests
 
 index_name="bigdata"
 es = Elasticsearch(['localhost:9200'])
-
+mapping = '''
+{  
+  "mappings":{  
+    "assignment3":{  
+      "properties": {
+      "coordinates": {"type": "geo_point","ignore_malformed": "true"}}
+  }
+}'''
+es.indices.create(index=index_name, ignore=400, body=mapping)
 count=0
-with open('UFO_Awesome_V2.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') as tsv_in:
+with open('UFO_Awesome_V2.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') as tsv_in, open("location_with_coordinates.tsv",mode='r',encoding='ISO-8859-1') as input_coord:
 	next(tsv_in,None)
-	for line in tsv_in:
+	next(input_coord,None)
+	for line, row in zip(tsv_in, input_coord):
+	# for line in tsv_in:
 		tempList = line.strip().replace('"','').split("\t")
 		len_tempList = len(tempList)
 		if len_tempList < 28:
 			for i in range(len_tempList,28):
 				tempList.append('')
+		coord_list = row.strip().replace('"','').split("\t")
+		try:
+			location = [float(coord_list[1]),float(coord_list[2])]
+		except:
+			location = []
 		
 
-		j = json.dumps({"sighted_at": tempList[0],"reported_at": tempList[1], "location": tempList[2].strip(),
+		j = json.dumps({"coordinates":location, "sighted_at": tempList[0],"reported_at": tempList[1], "location": tempList[2].strip(),
 										   "shape": tempList[3], "duration": tempList[4],  "description": tempList[5],
 										   "latitude": tempList[6], "longitude": tempList[7],	"NearestAirport": tempList[8],
 										   "Distance": tempList[9], "MeteorName": tempList[10], "Meteordistance": tempList[11],
