@@ -10,10 +10,12 @@ mapping = '''
   "mappings":{  
     "assignment3":{  
       "properties": {
-      "coordinates": {"type": "geo_point","ignore_malformed": "true"}}
+      "coordinates": {"type": "geo_point","ignore_malformed": "true"}
+      }
+  }
   }
 }'''
-es.indices.create(index=index_name, ignore=400, body=mapping)
+index=es.indices.create(index=index_name, ignore=400, body=mapping)
 count=0
 with open('UFO_Awesome_V2.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') as tsv_in, open("location_with_coordinates.tsv",mode='r',encoding='ISO-8859-1') as input_coord:
 	next(tsv_in,None)
