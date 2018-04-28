@@ -111,13 +111,11 @@ select {
                   "wildcard" : { "sighted_at": value+"*" }
                 },
                 _source: ["sighted_at", "location", "coordinates"],
-                size: 100
+                size: 3000
               }
             }).then(function (resp) {
                 hits = resp["hits"]["hits"]
-                //alert(JSON.stringify(hits));
                 location_data = getLocationData(hits);
-                //alert(JSON.stringify(location_data));
                 coordinates_array = getcoordinates(location_data);
                 worldMapPlot();
 
@@ -216,14 +214,14 @@ select {
           svg.selectAll("circle")
                 .data(coordinates_array).enter()
                 .append("circle")
-                .attr("cx", function (d) { console.log(projection(d)); return projection(d)[0]; })
+                .attr("cx", function (d) { return projection(d)[0]; })
                 .attr("cy", function (d) { return projection(d)[1]; })
                 .attr("r", "5px")
                 //.attr("fill", "black")
-                .attr("fill", function (d) { return isNaN(projection(d)[1]) ? "white" : "black"; })
+                .attr("fill", function (d) { return isNaN(projection(d)[1]) ? "white" : "yellow"; })
                 .append("svg:title")
                   //.text(function(d) { return projection(d)[0]+","+projection(d)[1]; });
-                  .text(function(d) { console.log(d[2]); return d[2]; });
+                  .text(function(d) { return d[2]; });
         });
 
         d3.select(self.frameElement).style("height", height + "px");
