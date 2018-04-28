@@ -27,10 +27,8 @@ with open("../ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') a
 		if len(r[18].strip()) <= 0:  # 'population density'
 			continue
 		descriptionWords = re.split(regexSplit,r[5].lower())   # 'description' r[5]
-		# if 'dentist' in r[5].lower():
-		# 	print(r)
 
-
+		#check for keywords to find if male/female/adult/youth
 		if year not  in yearDict.keys():
 			yearDict[year] = {}
 			yearDict[year]["Male"] = 0
@@ -49,7 +47,7 @@ with open("../ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') a
 			yearDict[year]["Not_Adult"] = yearDict[year]["Not_Adult"] + 1
 
 
-
+#populate the TSV
 for k in yearDict.keys():
 	if yearDict[k]["Male"] != 0 or yearDict[k]["Female"] != 0:
 		output.write(str(k) + '\t' + str(yearDict[k]["Male"]) + '\t' + str(yearDict[k]["Female"]) + '\t' + str(yearDict[k]["Adult"]) + '\t' + str(yearDict[k]["Not_Adult"])+'\n')

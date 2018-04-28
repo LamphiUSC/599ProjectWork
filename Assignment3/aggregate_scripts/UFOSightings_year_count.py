@@ -27,6 +27,7 @@ with open("../ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') a
         else:
             yearDict[year] = 1
 
+#populate tsv
 for k, v in yearDict.items():
     output.write(str(k)+'\t'+str(v)+'\n')
 

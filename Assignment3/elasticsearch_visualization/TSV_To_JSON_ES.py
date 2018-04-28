@@ -23,7 +23,7 @@ index=es.indices.create(index=index_name, ignore=400, body=mapping)
 count=0
 
 #open files for writing into json and indexing into ES
-with open('UFO_Awesome_V2.json', 'w') as output,open("ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') as tsv_in, open("location_with_coordinates.tsv",mode='r',encoding='ISO-8859-1') as input_coord:
+with open('UFO_Awesome_V2.json', 'w') as output,open("../ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') as tsv_in, open("location_with_coordinates.tsv",mode='r',encoding='ISO-8859-1') as input_coord:
 	next(tsv_in,None)
 	next(input_coord,None)
 	for line, row in zip(tsv_in, input_coord):

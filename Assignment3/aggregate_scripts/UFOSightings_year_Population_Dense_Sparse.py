@@ -34,6 +34,7 @@ with open("../ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') a
         else:
             yearDict[year]["Dense"] = yearDict[year]["Dense"] + 1
 
+#populate the tsv
 for k in yearDict.keys():
     if yearDict[k]["Dense"] != 0 or yearDict[k]["Sparse"] != 0:
         output.write(str(k) + '\t' + str(yearDict[k]["Dense"]) + '\t' + str(yearDict[k]["Sparse"]) + '\n')

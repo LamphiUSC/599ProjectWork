@@ -222,7 +222,8 @@ select {
                 //.attr("fill", "black")
                 .attr("fill", function (d) { return isNaN(projection(d)[1]) ? "white" : "black"; })
                 .append("svg:title")
-                  .text(function(d) { return projection(d)[0]+","+projection(d)[1]; });
+                  //.text(function(d) { return projection(d)[0]+","+projection(d)[1]; });
+                  .text(function(d) { console.log(d[2]); return d[2]; });
         });
 
         d3.select(self.frameElement).style("height", height + "px");
