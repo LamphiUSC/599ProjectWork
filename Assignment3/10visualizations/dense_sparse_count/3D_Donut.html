@@ -3,12 +3,12 @@
 <style>
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  width: 960px;
-  height: 500px;
+  width: 1210px;
+  height: 800px;
   position: relative;
 }
 path.slice{
-	stroke-width:2px;
+	stroke-width:10px;
 }
 polyline{
 	opacity: .3;
@@ -22,6 +22,10 @@ svg text.percent{
 	font-size:12px;
 }
 
+td {
+    text-align: center;
+}
+
 </style>
 
 <body>
@@ -32,7 +36,10 @@ svg text.percent{
 <script src="Donut3D.js"></script>
 <script>
 
-var svg = d3.select("body").append("svg").attr("width",700).attr("height",300);
+var margin = {top: 20, right: 80, bottom: 30, left: 100};
+var svg = d3.select("body").append("svg").attr("width",1200).attr("height",550);
+
+
 
 svg.append("g").attr("id","Dense_Population");
 svg.append("g").attr("id","Sparse_Population");
@@ -52,8 +59,8 @@ $.getJSON('population.json', function(data) {
     sparse_population_data = data["Data"][1]["Sparse"]
 
 
-    Donut3D.draw("Dense_Population", denseData(), 150, 150, 130, 100, 30, 0.4);
-    Donut3D.draw("Sparse_Population", sparseData(), 450, 150, 130, 100, 30, 0);
+    Donut3D.draw("Dense_Population", denseData(), 290, 250, 290, 230, 30, 0.4);
+    Donut3D.draw("Sparse_Population", sparseData(), 880, 250, 290, 230, 30, 0);
 
 
     function denseData(){
@@ -69,4 +76,14 @@ $.getJSON('population.json', function(data) {
 });
 
 </script>
+
+<div>
+    <table style="width:1200px">
+        <tr>
+            <td><h1>Dense</h1></td>
+            <td><h1>Sparse</h1></td>
+        </tr>
+    </table>
+</div>
+
 </body>
