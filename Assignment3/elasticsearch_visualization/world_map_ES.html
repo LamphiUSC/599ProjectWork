@@ -65,6 +65,8 @@ body {
 
     $(document).ready(function(){
 
+
+        //Populating dropdown containing years
         year_array = ['1906', '1910', '1914', '1916', '1920', '1922', '1925', '1929', '1930', '1931', '1933', '1934',
                     '1935', '1936', '1937', '1938', '1939', '1941', '1942', '1943', '1944', '1945', '1946', '1947', '1948',
                     '1949', '1950', '1951', '1952', '1953', '1954', '1955', '1956', '1957', '1958', '1959', '1960', '1961',
@@ -78,7 +80,6 @@ body {
             var text = year_array[i];
             var option = document.createElement("option");
             option.setAttribute("value", text);
-            //option.setAttribute("onclick", "sech("+text+")");
             var textNode = document.createTextNode(text);
             option.appendChild(textNode);
             select.appendChild(option);
@@ -86,7 +87,8 @@ body {
 
     });
 
-var value = "";
+    var value = "";
+    //Elastic Search initialization and search using wildcard "year*" where year is selected option by the user from the dropdown
     function search(selectObject) {
 
         value = selectObject.value;
@@ -122,6 +124,8 @@ var value = "";
 
     }
 
+
+    //Getting location coordinates from the elastic search result
     var getcoordinates = function(location_data) {
         coord = []
         for(var i=0; i<location_data.length; i++) {
@@ -133,6 +137,7 @@ var value = "";
         return coord;
     }
 
+    //Getting location names from the elastic search result
     var getLocationData = function(no_of_hits) {
         location_data = []
         for(var i=0; i<hits.length; i++) {
@@ -143,6 +148,7 @@ var value = "";
         return location_data;
     }
 
+    //Plot the world map with the black circles plotted using th location coordinates
     var worldMapPlot = function() {
         d3.select("body").selectAll("svg").remove();
 

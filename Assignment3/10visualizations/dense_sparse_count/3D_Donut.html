@@ -39,11 +39,10 @@ td {
 var margin = {top: 20, right: 80, bottom: 30, left: 100};
 var svg = d3.select("body").append("svg").attr("width",1200).attr("height",550);
 
-
-
 svg.append("g").attr("id","Dense_Population");
 svg.append("g").attr("id","Sparse_Population");
 
+//Random Color Generator
 function getRandomColor() {
   var letters = '0123456789ABCDEF';
   var color = '#';
@@ -53,7 +52,7 @@ function getRandomColor() {
   return color;
 }
 
-
+//Fetch the population.json and split the data into Dense_Population and Sparse Population and draw the 3D Donuts for both Dense and Sparse Population
 $.getJSON('population.json', function(data) {
     dense_population_data = data["Data"][0]["Dense"]
     sparse_population_data = data["Data"][1]["Sparse"]

@@ -4,6 +4,8 @@ dense={}
 sparse={}
 data = {}
 count = 1
+
+# Read Population_dense_sparse_count.tsv, and create two jsons Dense and Sparse
 with open("Population_dense_sparse_year_count.tsv","r", encoding = "ISO-8859-1") as f:
     for line in f:
        if count == 1:

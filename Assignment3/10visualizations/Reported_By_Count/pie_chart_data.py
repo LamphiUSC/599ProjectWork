@@ -3,6 +3,8 @@ import csv
 headers = []
 countList = []
 count = 1
+
+#Create total count for all 4 types : Man, Female, Adult, Kid
 with open("ReportedBy_Male_Female_Adult_kid_year_count.tsv","r", encoding = "ISO-8859-1") as f:
     for line in f:
        if count == 1:

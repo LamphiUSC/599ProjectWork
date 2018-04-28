@@ -2,6 +2,8 @@ import csv
 
 data={}
 count = 1
+
+# tsv to csv
 fcsv = csv.writer(open("ShapeReported_year_count.csv", "w"))
 fcsv.writerow(["Year", "OneD", "TwoD", "ThreeDOrObject", "Unknown"])
 with open("ShapeReported_year_count.tsv","r", encoding = "ISO-8859-1") as f:

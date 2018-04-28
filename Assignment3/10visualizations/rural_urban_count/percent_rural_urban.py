@@ -2,6 +2,8 @@ import json
 
 data = {}
 count = 1
+
+#Create JSON from TSV with calculated percentage of Urban population over Rural population corresponding to each year
 with open("rural_vs_urban_year_count.tsv","r", encoding = "ISO-8859-1") as f:
     for line in f:
        if count == 1:
@@ -16,9 +18,9 @@ with open("rural_vs_urban_year_count.tsv","r", encoding = "ISO-8859-1") as f:
        data.setdefault("Data", []).append({"Year": sp[0], "Percent": percent})
 
 
-print(data)
-print("\n")
-print(142/(926+142))
+#print(data)
+#print("\n")
+#print(142/(926+142))
 
 
 with open('data.json', 'w') as outfile:
