@@ -17,3 +17,61 @@ The important files present in the folders are :-
 
 
 The order in which the programs need to be executed:
+
+
+Code changes
+1) image_space/flann_index/get.py
+Moved the run() function out from flann_index.py to get.py as I didn't want the flann_index code to run everytime when the call is made to image similarity server.
+Had to load the image_map and image_files pickle data which contained the precomputed flann_index.
+Ran flann_index.py once to precompute the index.
+
+2) image_space/flann_index/flann_index.py
+In below OpenCV function call, tried different comparison methods. Has commented all but one.
+dist = cv2.compareHist(hist, image_map[file], cv2.cv.CV_COMP_INTERSECT)
+
+3) image_space/imagespace_flann/server/flann_imagecontentsearch.py
+Did following changes to the file. Removed the query? string and the 'k' paramter from the GET request sent to image similarity server.
+The value of k is hardcoded as 10 in the run() function.
+
+#return requests.get(setting.get('IMAGE_SPACE_FLANN_INDEX') +'?query=' + params['histogram'] +'&k=' + str(limit)).json()
+return requests.get(setting.get('IMAGE_SPACE_FLANN_INDEX') +params['histogram']).json()
+
+4) image_space/imagespace/server/imagefeatures_rest.py
+Did following chnages to this file.
+a) Enabled the opencv logic by commenting the "cv2_available = False" statement
+   cv2_available = False
+   #cv2_available = False
+
+b) Changed the flag as sown below as it is not available in OpenCV3.
+   image = cv2.imdecode(file_bytes, flags=cv2.CV_LOAD_IMAGE_UNCHANGED)  #----> Original code
+   image = cv2.imdecode(file_bytes, flags=cv2.IMREAD_COLOR)  #----> Changes
+
+
+Environment variables setup in .bashrc
+
+export OODT_HOME=~/Ass3/deploy/ 
+export GANGLIA_URL=http://zipper.jpl.nasa.gov/ganglia/
+export FILEMGR_URL=http://localhost:9000
+export WORKFLOW_URL=http://localhost:9001
+export RESMGR_URL=http://localhost:9002
+export WORKFLOW_HOME=$OODT_HOME/workflow
+export FILEMGR_HOME=$OODT_HOME/filemgr
+export PGE_ROOT=$OODT_HOME/pge
+export PCS_HOME=$OODT_HOME/pcs
+export FMPROD_HOME=$OODT_HOME/tomcat/webapps/fmprod/WEB-INF/classes/
+
+#URL to SOLR index
+export IMAGE_SPACE_SOLR=http://localhost:8081/solr/imagecatdev/
+
+#Directory containing all the image files.
+export IMAGE_SPACE_SOLR_PREFIX=/home/aashish/mywork/images2/
+
+# Apache webserver with root directory pointed to directory containing all the files.
+export IMAGE_SPACE_PREFIX=http://localhost:80/
+
+# This contains the filename of the file which contains list of all images with qualified path.
+export IMAGE_SPACE_LISTS=/home/aashish/listings.txt
+
+#Tangelo server URL and the corresponding get service which serves as the entry point for webservice call.
+export IMAGE_SPACE_FLANN_INDEX=http://localhost:9220/get/
+
