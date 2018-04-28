@@ -116,7 +116,7 @@ The generate the TSV files corresponding to the 10 aggregate data we have decide
 	   -- Run Within_25_miles_count/negative_bar.html to draw negative-bar chart in Firefox
 
 3) Under elasticsearch_visualization:
-	b) Modify the /usr/local/etc/elasticsearch/elasticsearch.yml to enable CORS
+	b) Modify the config file under /usr/local/etc/elasticsearch/elasticsearch.yml to enable CORS
 		http.cors.enabled: true
 		http.cors.allow-origin: "/.*/"
 		http.cors.allow-credentials: true
