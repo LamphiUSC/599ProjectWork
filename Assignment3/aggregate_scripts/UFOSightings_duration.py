@@ -1,7 +1,7 @@
 import csv
 import dateparser
 output = open("duration_year_count.tsv",'w')
-output.write("Year\tSecs\tMinutes\tHours\tDays\tStillThere\tNoDuration\n")
+output.write("Year\tSecs\tMinutes\tHours\tDays\tNoDuration\n")
 
 # aggregating based on duration like within secs, minutes, weird text like still there etc..
 resultDict = {} # key is year : per year how many sightings within secs, minutes, still there or no duration mentioned etc..
@@ -30,7 +30,6 @@ with open("../ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') a
 			resultDict[year]["Minutes"] = 0
 			resultDict[year]["Hours"] =0
 			resultDict[year]["Days"] = 0
-			resultDict[year]["StillThere"] = 0
 			resultDict[year]["NoDuration"] = 0
 		if len(duration) == 0:
 			resultDict[year]["NoDuration"] = resultDict[year]["NoDuration"] + 1
@@ -54,11 +53,9 @@ with open("../ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') a
 			resultDict[year]["Hours"] = resultDict[year]["Hours"] + 1
 		elif ('day' or 'days') in duration:
 			resultDict[year]["Days"] = resultDict[year]["Days"] + 1
-		else:
-			resultDict[year]["StillThere"] = resultDict[year]["StillThere"] + 1
 
 for k in resultDict.keys():
-	output.write(str(k) + '\t' + str(resultDict[k]["Secs"]) + '\t' + str(resultDict[k]["Minutes"]) + '\t' + str(resultDict[k]["Hours"]) + '\t' + str(resultDict[k]["Days"]) + '\t' + str(resultDict[k]["StillThere"]) + '\t' + str(resultDict[k]["NoDuration"]) + '\n')
+	output.write(str(k) + '\t' + str(resultDict[k]["Secs"]) + '\t' + str(resultDict[k]["Minutes"]) + '\t' + str(resultDict[k]["Hours"]) + '\t' + str(resultDict[k]["Days"]) + '\t' + str(resultDict[k]["NoDuration"]) + '\n')
 
 
 
