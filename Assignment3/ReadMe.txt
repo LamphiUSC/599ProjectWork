@@ -8,19 +8,9 @@ There are 4 major sub-folders in the Assignment.
 The main input file containing the ufo data is :- 
 ufo_awesome_FINAL_OUTPUT_v2.tsv
 
-The intermediate files are as following:-
-
-
-The main modified output file containing the ufo data is :- 
-
-
-
 The libraries used/need to be installed are:-
 brew install elasticsearch
 pip3 install elasticsearch
-
-The important files present in the folders are :-
-
 
 The order in which the programs need to be executed:
 
@@ -84,7 +74,7 @@ export IMAGE_SPACE_FLANN_INDEX=http://localhost:9220/get/
 
 VISUALIZATIONS:
 1) All 10 py scripts in aggregate_scripts
-The generate the TSV files corresponding to the 10 aggregate data we have decided to visualize using D3:
+Then generate the TSV files corresponding to the 10 aggregate data we have decided to visualize using D3:
 	a) duration_year_count
 	b) location_aggregation_cloud
 	c) meteors_rural_vs_urban_year_count

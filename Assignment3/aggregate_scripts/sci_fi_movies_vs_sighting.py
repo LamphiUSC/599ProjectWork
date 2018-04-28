@@ -4,7 +4,7 @@ input_reader = open("../ufo_awesome_FINAL_OUTPUT_v2.tsv",'rU')
 reader = csv.reader(input_reader, delimiter = '\t')
 
 output = open("sci_fi_movies_vs_sighting.tsv",'w')
-
+#Open the output file to store the aggregated tsv
 output.write("Year\tNo of sightings\tNo of sci-fi movies released\n")
 
 year_dict = {}
@@ -23,9 +23,11 @@ for row in reader:
 			year_dict[year] = {}
 			year_dict[year]["sci-fi"]=0
 			year_dict[year]["sighting"]=0
+		#check count of the sci-fi vs sighting
 		year_dict[year]["sci-fi"]=scifi_count
 		year_dict[year]["sighting"]=sighting_count
 	
+	#populate the TSV
 for key in year_dict:
 	if year_dict[key]["sci-fi"] !=0 or year_dict[key]["sighting"] != 0:
 		print key, year_dict[key]

@@ -30,6 +30,7 @@ with open("../ufo_awesome_FINAL_OUTPUT_v2.tsv",mode='r',encoding='ISO-8859-1') a
             yearDict[year]["Within_25Miles"] = 0
             yearDict[year]["Outside_25Miles"] = 0
         if distance <= 25:
+            #checking for distance
             yearDict[year]["Within_25Miles"] = yearDict[year]["Within_25Miles"] + 1
         else:
             yearDict[year]["Outside_25Miles"] = yearDict[year]["Outside_25Miles"] + 1
