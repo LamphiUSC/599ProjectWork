@@ -6,11 +6,13 @@ import pickle
 
 from pymongo import MongoClient
 
+
+#store the lat and long coordinates of all the 60k+ locations in a tsv to index into ES
 tsv_file_input = open("ufo_awesome_FINAL_OUTPUT_v2.tsv",'r')
 reader = csv.reader(tsv_file_input, delimiter = '\t')
 tsv_file_output = open("location_with_coordinates.tsv",'w')
 
-# this DB  contains allthe unique location strings and the corresponding longitude and latitudes
+# this DB contains all the unique location strings and the corresponding longitude and latitudes which was saved during assignment 1
 db = MongoClient().ufo.cities
 tsv_file_output.write("location\tlongitude\tlatitude\n")
 count=0
