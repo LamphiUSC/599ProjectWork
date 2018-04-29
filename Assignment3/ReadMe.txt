@@ -14,6 +14,10 @@ The libraries used/need to be installed are:-
 brew install elasticsearch
 pip3 install elasticsearch
 
+*******************************************************************************************************************************************
+NOTE: THE VISUALIZATIONS ARE VISIBLE ONLY ON FIREFOX when running on local system. (Chrome and other browsers give cross validation errors)
+*******************************************************************************************************************************************
+
 The order in which the programs need to be executed:
 
 IMAGE_SPACE:
