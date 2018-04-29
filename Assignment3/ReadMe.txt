@@ -8,6 +8,8 @@ There are 4 major sub-folders in the Assignment.
 The main input file containing the ufo data is :- 
 ufo_awesome_FINAL_OUTPUT_v2.tsv
 
+The conversion from TSV to JSON takes place in the elasticsearch_visualization folder
+
 The libraries used/need to be installed are:-
 brew install elasticsearch
 pip3 install elasticsearch
@@ -106,6 +108,7 @@ Then generate the TSV files corresponding to the 10 aggregate data we have decid
 	   -- Run Within_25_miles_count/negative_bar.html to draw negative-bar chart in Firefox
 
 3) Under elasticsearch_visualization:
+	a) TSV_To_JSON_ES.py is a script which converts the TSV to JSON and also indexes the same into ElasticSearch
 	b) Modify the config file under /usr/local/etc/elasticsearch/elasticsearch.yml to enable CORS
 		http.cors.enabled: true
 		http.cors.allow-origin: "/.*/"
